@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LIFE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LIFE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "STATE_OUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "STATE_OUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "STATE_OUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IS_CORRECT_LETTER[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IS_CORRECT_LETTER[1]",
+					"strict" : false
+				},
+				{
+					"name" : "START",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

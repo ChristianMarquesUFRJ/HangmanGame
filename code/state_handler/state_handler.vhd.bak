@@ -1,0 +1,125 @@
+-- UNIVERSIDADE FEDERAL DO RIO DE JANEIRO - UFRJ
+-- Autor: Christian Marques de Oliveira Silva
+--	Disciplina: Laboratório de Sistemas Digitais
+--
+-- Objetivo: Manipular os estados do sistema baseado no estado atual e nas entradas
+--
+--	Entradas: 	HIDE_WORD, MASK, IS_CORRECT_LETTER, LIFE
+-----------------------------------------------------------------------------------------------------
+
+------------------------------------
+-- Bibliotecas
+------------------------------------
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+use IEEE.std_logic_unsigned.all;
+------------------------------------
+
+------------------------------------
+-- Entidade Principal
+------------------------------------
+entity state_handler is
+	port(
+		HIDE_WORD		    :	in	std_logic_vector(23 downto 0); -- Palavra escondida: "F0CADA"
+		MASK		        :	in	std_logic_vector(5 downto 0); -- Mascara de 
+		IS_CORRECT_LETTER   : 	in	std_logic;
+		START               : 	in	std_logic;
+		CLK                 : 	in	std_logic;
+		LIFE_OUT            : 	out	std_logic(1 downto 0);
+		STATE_OUT           : 	out	std_logic(2 downto 0);
+        -- A,B,C,D,E,F         :   out std_logic_vector(3 downto 0)
+    );	
+end state_handler;
+------------------------------------
+
+------------------------------------
+-- Arquitetura Principal
+------------------------------------
+architecture hardware of state_handler is
+    -- Criacao dos estados
+    TYPE GAME_STATE IS (Char0, Char1, Char2, Char3, Char4, Win, Lose);
+    SIGNAL current_state: GAME_STATE := Char0;
+    SIGNAL next_state: GAME_STATE := Char1;
+
+    -- Separacao das letras da palavra
+    SIGNAL letter1 : std_logic_vector(3 downto 0) := HIDE_WORD(23 downto 20);   -- 16 = "F"
+    SIGNAL letter2 : std_logic_vector(3 downto 0) := HIDE_WORD(19 downto 16);   -- 0 =  "O"
+    SIGNAL letter3 : std_logic_vector(3 downto 0) := HIDE_WORD(15 downto 12);   -- 12 = "C"
+    SIGNAL letter4 : std_logic_vector(3 downto 0) := HIDE_WORD(11 downto 8);    -- 10 = "A"
+    SIGNAL letter5 : std_logic_vector(3 downto 0) := HIDE_WORD(7 downto 4);     -- 13 = "D"
+    SIGNAL letter6 : std_logic_vector(3 downto 0) := HIDE_WORD(3 downto 0);     -- 10 = "A"
+
+    -- Controle
+    SIGNAL LIFE         : std_logic(1 downto 0) := '11'; -- Vidas restantes 
+begin
+
+    -- Mudanca de estados
+    PROCESS change_state (START, IS_CORRECT_LETTER, CLK)
+    BEGIN
+        IF ((IS_CORRECT_LETTER = '0') and rising_edge(CLK)) THEN
+            LIFE   <= LIFE - 1;
+
+        IF (START = '1' and rising_edge(START) and rising_edge(CLK)) THEN
+            current_state   <= Char0;
+            next_state      <= Char1
+        
+        ELSIF ((current_state = Char0) and (IS_CORRECT_LETTER = '1') and rising_edge(CLK)) THEN
+            current_state   <= next_state;
+            next_state      <= Char2;
+        
+        ELSIF ((current_state = Char1) and (IS_CORRECT_LETTER = '1') and rising_edge(CLK)) THEN
+            current_state   <= next_state;
+            next_state      <= Char3;
+        
+        ELSIF ((current_state = Char2) and (IS_CORRECT_LETTER = '1') and rising_edge(CLK)) THEN
+            current_state   <= next_state;
+            next_state      <= Char4;
+        
+        ELSIF ((current_state = Char3) and (IS_CORRECT_LETTER = '1') and rising_edge(CLK)) THEN
+            current_state   <= next_state;
+            next_state      <= Win;
+        
+        ELSIF ((current_state = Char4) and (IS_CORRECT_LETTER = '1') and rising_edge(CLK)) THEN
+            current_state   <= next_state;
+        
+        ELSIF ((LIFE = 0) and (IS_CORRECT_LETTER = '0') and rising_edge(CLK)) THEN
+            current_state   <= Lose;
+
+        END IF;
+    END PROCESS;
+
+    -- Atuacao das saidas a partir do estado
+    PROCESS output_update (current_state, LIFE, CLK)
+    BEGIN
+        IF ((current_state = Char0) and (LIFE > 0)) THEN
+            STATE_OUT <= '000';
+
+        ELSIF ((current_state = Char1) and (LIFE > 0)) THEN
+            STATE_OUT <= '001';
+            
+        ELSIF ((current_state = Char2) and (LIFE > 0)) THEN
+            STATE_OUT <= '010';
+
+        ELSIF ((current_state = Char3) and (LIFE > 0)) THEN
+            STATE_OUT <= '011';
+
+        ELSIF ((current_state = Char4) and (LIFE > 0)) THEN
+            STATE_OUT <= '100';
+
+        ELSIF ((current_state = Win) and (LIFE > 0)) THEN
+            STATE_OUT <= '101';
+
+        ELSIF ((current_state = Lose) and (LIFE > 0)) THEN
+            STATE_OUT <= '110';
+
+        ELSE 
+            STATE_OUT <= '111';
+
+        END IF;
+    END 
+
+    LIFE_OUT <= LIFE;
+
+end hardware;
+------------------------------------
