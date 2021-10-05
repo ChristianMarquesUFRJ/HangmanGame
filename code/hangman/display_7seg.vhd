@@ -53,7 +53,7 @@ begin
 				when "01110" => DISPLAY_OUT <= "0000110"; -- "E"
 				when "01111" => DISPLAY_OUT <= "0001110"; -- "F"
 				when "10000" => DISPLAY_OUT <= "1110111"; -- "-"
-				when "10001" => DISPLAY_OUT <= "0000010"; -- "G" 
+				when "10001" => DISPLAY_OUT <= "1000010"; -- "G" 
 				when "10010" => DISPLAY_OUT <= "0001100"; -- "P" 
 				when others => DISPLAY_OUT <= "1111111"; -- "apagado"
 			end case;
