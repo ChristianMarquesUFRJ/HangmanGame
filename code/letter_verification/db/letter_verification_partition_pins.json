@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "MASK[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MASK[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MASK[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MASK[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MASK[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MASK[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LIFE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LIFE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[10]",
+					"strict" : false
+				},
+				{
+					"name" : "START",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[13]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[12]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[15]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[8]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[7]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[11]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[9]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYBOARD[14]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

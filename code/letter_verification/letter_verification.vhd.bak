@@ -1,0 +1,182 @@
+-- UNIVERSIDADE FEDERAL DO RIO DE JANEIRO - UFRJ
+-- Autor: Christian Marques de Oliveira Silva
+--	Disciplina: Laboratório de Sistemas Digitais
+--
+-- Objetivo: Detectar se a letra inserida eh valida e fazer a mascara do que deve ser exibido
+--
+--	Entradas: 	HIDE_WORD, KEYBOARD, CLK
+--  Saidas:     MASK, IS_CORRECT_LETTER
+-----------------------------------------------------------------------------------------------------
+
+------------------------------------
+-- Bibliotecas
+------------------------------------
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+use IEEE.std_logic_unsigned.all;
+------------------------------------
+
+------------------------------------
+-- Entidade Principal
+------------------------------------
+entity letter_verification is
+	port(
+		HIDE_WORD		    :	in	std_logic_vector(23 downto 0); -- Palavra escondida: "F0CADA"
+		KEYBOARD		    :	in	std_logic_vector(15 downto 0); -- Teclado com todas as "letras" de 4 bits possiveis (de 0 a 15)
+		START               : 	in	std_logic;                      -- Sinal de atualizacao dos estados
+		CLK                 : 	in	std_logic;                      -- Sinal de atualizacao dos estados
+		MASK		        :	out	std_logic_vector(5 downto 0);   -- Mascara que determina quais letras foram acertadas e serao exibidas
+		IS_CORRECT_LETTER   : 	out	std_logic_vector(1 downto 0);    -- Status da nova letra: 0 (nenhuma letra nova), 1 (letra errada) e 2 (letra correta)
+		OUT_KEY		        :	out	std_logic_vector(15 downto 0) -- Teclado com todas as "letras" de 4 bits possiveis (de 0 a 15)
+
+    );	
+end letter_verification;
+------------------------------------
+
+------------------------------------
+-- Arquitetura Principal
+------------------------------------
+architecture hardware of letter_verification is
+    -- Separacao das letras da palavra
+    CONSTANT letter1 : std_logic_vector(3 downto 0) := HIDE_WORD(23 downto 20);   -- 16 = "F"
+    CONSTANT letter2 : std_logic_vector(3 downto 0) := HIDE_WORD(19 downto 16);   -- 0 =  "O"
+    CONSTANT letter3 : std_logic_vector(3 downto 0) := HIDE_WORD(15 downto 12);   -- 12 = "C"
+    CONSTANT letter4 : std_logic_vector(3 downto 0) := HIDE_WORD(11 downto 8);    -- 10 = "A"
+    CONSTANT letter5 : std_logic_vector(3 downto 0) := HIDE_WORD(7 downto 4);     -- 13 = "D"
+
+    SIGNAL UPDATE                   : std_logic_vector(15 downto 0) := (others => '0');
+    SIGNAL UPDATE_MASK              : std_logic_vector(15 downto 0) := (others => '1');
+    SIGNAL MASK_CTRL                : std_logic_vector(5 downto 0)  := (others => '0');
+    SIGNAL IS_CORRECT_LETTER_CTRL   : std_logic_vector(15 downto 0)  := (others => '0');
+    SIGNAL IS_CORRECT_LETTER_CTRL_2 : std_logic_vector(1 downto 0)  := (others => '0');
+begin
+
+    OUT_KEY <= UPDATE;
+    -- OUT_KEY <= UPDATE and UPDATE_MASK;
+
+    -- OUT_KEY <= UPDATE WHEN (START = '0') ELSE (others => '0');
+
+    reset_process: PROCESS(START)
+    BEGIN
+    
+        IF (rising_edge(START)) THEN 
+            IS_CORRECT_LETTER_CTRL <= (others => '0');
+        END IF;
+
+        -- FOR index IN 0 to 15 LOOP
+        --     IF (rising_edge(START) THEN
+        --         UPDATE(index) <= '1';
+        --     END IF;
+        -- END LOOP;
+
+        -- IF (rising_edge(START)) THEN
+        --     UPDATE_MASK <= (others => '0');
+        -- ELSE
+        --     UPDATE_MASK <= (others => '1');
+        -- END IF;
+    END PROCESS reset_process;
+
+    MASK <= MASK_CTRL;
+    IS_CORRECT_LETTER <= IS_CORRECT_LETTER_CTRL_2;
+    -- IS_CORRECT_LETTER <=    "10" WHEN (IS_CORRECT_LETTER_CTRL(0) = '1') or (IS_CORRECT_LETTER_CTRL(15) = '1')  ELSE
+    --                         "01" WHEN (IS_CORRECT_LETTER_CTRL(1) = '1')  ELSE "00";
+
+    button0_process: PROCESS(KEYBOARD(0))
+    BEGIN
+        -- Lentra O
+        IF (rising_edge(KEYBOARD(0))) THEN 
+            MASK_CTRL(1) <= '1';
+            IS_CORRECT_LETTER_CTRL(0) <= '1';
+            -- IS_CORRECT_LETTER <= "10";
+        END IF;
+            
+    END PROCESS button0_process;
+
+    button1_process: PROCESS(KEYBOARD(1))
+    BEGIN
+        -- Lentra O
+        IF (rising_edge(KEYBOARD(1))) THEN 
+            IS_CORRECT_LETTER_CTRL(1) <= '1';
+        END IF;
+            
+    END PROCESS button1_process;
+
+    button15_process: PROCESS(KEYBOARD(15))
+    BEGIN
+        -- Lentra F
+        IF (rising_edge(KEYBOARD(15))) THEN 
+            MASK_CTRL(0) <= '1';
+            IS_CORRECT_LETTER_CTRL(15) <= '1';
+        END IF;
+
+    END PROCESS button15_process;
+
+
+    -- correct_letter0_process: PROCESS(IS_CORRECT_LETTER_CTRL(0))
+    -- BEGIN
+    --     IF (rising_edge(IS_CORRECT_LETTER_CTRL(0))) THEN 
+    --         IS_CORRECT_LETTER_CTRL_2 <= "10";
+    --     END IF;
+
+    -- END PROCESS correct_letter0_process;
+
+    -- correct_letter1_process: PROCESS(IS_CORRECT_LETTER_CTRL(1))
+    -- BEGIN
+    --     IF (rising_edge(IS_CORRECT_LETTER_CTRL(1))) THEN 
+    --         IS_CORRECT_LETTER_CTRL_2 <= "01";
+    --     END IF;
+
+    -- END PROCESS correct_letter1_process;
+
+    -- correct_letter15_process: PROCESS(IS_CORRECT_LETTER_CTRL(15))
+    -- BEGIN
+    --     IF (rising_edge(IS_CORRECT_LETTER_CTRL(15))) THEN 
+    --         IS_CORRECT_LETTER_CTRL_2 <= "10";
+    --     END IF;
+
+    -- END PROCESS correct_letter15_process;
+
+    -- keyboard_process: PROCESS (START, KEYBOARD)
+    -- BEGIN
+    --     FOR keyboard_index IN 0 to 15 LOOP
+
+    --         -- Lentra F
+    --         IF (rising_edge(KEYBOARD(15))) THEN 
+    --             MASK_CTRL <= MASK_CTRL or ("100000");
+    --             IS_CORRECT_LETTER <= "10";
+
+    --         -- Lentra O
+    --         ELSIF (rising_edge(KEYBOARD(0))) THEN 
+    --             MASK_CTRL <= MASK_CTRL or ("010000");
+    --             IS_CORRECT_LETTER <= "10";
+
+    --         -- Lentra C
+    --         ELSIF (rising_edge(KEYBOARD(12))) THEN 
+    --             MASK_CTRL <= MASK_CTRL or ("001000");
+    --             IS_CORRECT_LETTER <= "10";
+
+    --         -- Lentra A
+    --         ELSIF (rising_edge(KEYBOARD(10))) THEN 
+    --             MASK_CTRL <= MASK_CTRL or ("000101");
+    --             IS_CORRECT_LETTER <= "10";
+
+    --         -- Lentra D
+    --         ELSIF (rising_edge(KEYBOARD(13))) THEN 
+    --             MASK_CTRL <= MASK_CTRL or ("000010");
+    --             IS_CORRECT_LETTER <= "10";
+
+    --         ELSIF (rising_edge(KEYBOARD(1)) or rising_edge(KEYBOARD(2))) THEN 
+    --             IS_CORRECT_LETTER <= "01";
+
+    --         ELSE
+    --             IS_CORRECT_LETTER <= "00";
+
+    --         END IF;
+
+    --     END LOOP;
+        
+    -- END PROCESS keyboard_process;
+
+end hardware;
+------------------------------------

@@ -1,0 +1,873 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
+
+// DATE "10/05/2021 10:04:46"
+
+// 
+// Device: Altera EP4CE6E22C6 Package TQFP144
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module letter_verification (
+	KEYBOARD,
+	START,
+	CLK,
+	MASK,
+	LIFE);
+input 	[15:0] KEYBOARD;
+input 	START;
+input 	CLK;
+output 	[5:0] MASK;
+output 	[1:0] LIFE;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \MASK[0]~output_o ;
+wire \MASK[1]~output_o ;
+wire \MASK[2]~output_o ;
+wire \MASK[3]~output_o ;
+wire \MASK[4]~output_o ;
+wire \MASK[5]~output_o ;
+wire \LIFE[0]~output_o ;
+wire \LIFE[1]~output_o ;
+wire \KEYBOARD[10]~input_o ;
+wire \START~input_o ;
+wire \KEYBOARD[13]~input_o ;
+wire \KEYBOARD[12]~input_o ;
+wire \KEYBOARD[0]~input_o ;
+wire \KEYBOARD[15]~input_o ;
+wire \CLK~input_o ;
+wire \KEYBOARD[3]~input_o ;
+wire \KEYBOARD[1]~input_o ;
+wire \KEYBOARD[2]~input_o ;
+wire \KEYBOARD[4]~input_o ;
+wire \life_counter~0_combout ;
+wire \life_counter~1_combout ;
+wire \KEYBOARD[6]~input_o ;
+wire \KEYBOARD[5]~input_o ;
+wire \life_counter~2_combout ;
+wire \life_counter~3_combout ;
+wire \KEYBOARD[8]~input_o ;
+wire \KEYBOARD[7]~input_o ;
+wire \life_counter~4_combout ;
+wire \life_counter~5_combout ;
+wire \KEYBOARD[11]~input_o ;
+wire \KEYBOARD[9]~input_o ;
+wire \life_counter~6_combout ;
+wire \life_counter~7_combout ;
+wire \KEYBOARD[14]~input_o ;
+wire \life_counter~8_combout ;
+wire \life_process:life_counter[0]~q ;
+wire \life_counter~9_combout ;
+wire \life_process:life_counter[1]~q ;
+wire [5:0] MASK_CTRL;
+wire [10:0] ERROR_CTRL;
+
+
+cycloneive_io_obuf \MASK[0]~output (
+	.i(MASK_CTRL[0]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\MASK[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \MASK[0]~output .bus_hold = "false";
+defparam \MASK[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \MASK[1]~output (
+	.i(MASK_CTRL[1]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\MASK[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \MASK[1]~output .bus_hold = "false";
+defparam \MASK[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \MASK[2]~output (
+	.i(MASK_CTRL[2]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\MASK[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \MASK[2]~output .bus_hold = "false";
+defparam \MASK[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \MASK[3]~output (
+	.i(MASK_CTRL[3]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\MASK[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \MASK[3]~output .bus_hold = "false";
+defparam \MASK[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \MASK[4]~output (
+	.i(MASK_CTRL[4]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\MASK[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \MASK[4]~output .bus_hold = "false";
+defparam \MASK[4]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \MASK[5]~output (
+	.i(MASK_CTRL[5]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\MASK[5]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \MASK[5]~output .bus_hold = "false";
+defparam \MASK[5]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \LIFE[0]~output (
+	.i(!\life_process:life_counter[0]~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\LIFE[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \LIFE[0]~output .bus_hold = "false";
+defparam \LIFE[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \LIFE[1]~output (
+	.i(!\life_process:life_counter[1]~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\LIFE[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \LIFE[1]~output .bus_hold = "false";
+defparam \LIFE[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[10]~input (
+	.i(KEYBOARD[10]),
+	.ibar(gnd),
+	.o(\KEYBOARD[10]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[10]~input .bus_hold = "false";
+defparam \KEYBOARD[10]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \START~input (
+	.i(START),
+	.ibar(gnd),
+	.o(\START~input_o ));
+// synopsys translate_off
+defparam \START~input .bus_hold = "false";
+defparam \START~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \MASK_CTRL[0] (
+	.clk(\KEYBOARD[10]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(MASK_CTRL[0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \MASK_CTRL[0] .is_wysiwyg = "true";
+defparam \MASK_CTRL[0] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[13]~input (
+	.i(KEYBOARD[13]),
+	.ibar(gnd),
+	.o(\KEYBOARD[13]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[13]~input .bus_hold = "false";
+defparam \KEYBOARD[13]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \MASK_CTRL[1] (
+	.clk(\KEYBOARD[13]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(MASK_CTRL[1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \MASK_CTRL[1] .is_wysiwyg = "true";
+defparam \MASK_CTRL[1] .power_up = "low";
+// synopsys translate_on
+
+dffeas \MASK_CTRL[2] (
+	.clk(\KEYBOARD[10]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(MASK_CTRL[2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \MASK_CTRL[2] .is_wysiwyg = "true";
+defparam \MASK_CTRL[2] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[12]~input (
+	.i(KEYBOARD[12]),
+	.ibar(gnd),
+	.o(\KEYBOARD[12]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[12]~input .bus_hold = "false";
+defparam \KEYBOARD[12]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \MASK_CTRL[3] (
+	.clk(\KEYBOARD[12]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(MASK_CTRL[3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \MASK_CTRL[3] .is_wysiwyg = "true";
+defparam \MASK_CTRL[3] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[0]~input (
+	.i(KEYBOARD[0]),
+	.ibar(gnd),
+	.o(\KEYBOARD[0]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[0]~input .bus_hold = "false";
+defparam \KEYBOARD[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \MASK_CTRL[4] (
+	.clk(\KEYBOARD[0]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(MASK_CTRL[4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \MASK_CTRL[4] .is_wysiwyg = "true";
+defparam \MASK_CTRL[4] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[15]~input (
+	.i(KEYBOARD[15]),
+	.ibar(gnd),
+	.o(\KEYBOARD[15]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[15]~input .bus_hold = "false";
+defparam \KEYBOARD[15]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \MASK_CTRL[5] (
+	.clk(\KEYBOARD[15]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(MASK_CTRL[5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \MASK_CTRL[5] .is_wysiwyg = "true";
+defparam \MASK_CTRL[5] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_io_ibuf \CLK~input (
+	.i(CLK),
+	.ibar(gnd),
+	.o(\CLK~input_o ));
+// synopsys translate_off
+defparam \CLK~input .bus_hold = "false";
+defparam \CLK~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[3]~input (
+	.i(KEYBOARD[3]),
+	.ibar(gnd),
+	.o(\KEYBOARD[3]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[3]~input .bus_hold = "false";
+defparam \KEYBOARD[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \ERROR_CTRL[2] (
+	.clk(\KEYBOARD[3]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(ERROR_CTRL[2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \ERROR_CTRL[2] .is_wysiwyg = "true";
+defparam \ERROR_CTRL[2] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[1]~input (
+	.i(KEYBOARD[1]),
+	.ibar(gnd),
+	.o(\KEYBOARD[1]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[1]~input .bus_hold = "false";
+defparam \KEYBOARD[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \ERROR_CTRL[0] (
+	.clk(\KEYBOARD[1]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(ERROR_CTRL[0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \ERROR_CTRL[0] .is_wysiwyg = "true";
+defparam \ERROR_CTRL[0] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[2]~input (
+	.i(KEYBOARD[2]),
+	.ibar(gnd),
+	.o(\KEYBOARD[2]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[2]~input .bus_hold = "false";
+defparam \KEYBOARD[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \ERROR_CTRL[1] (
+	.clk(\KEYBOARD[2]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(ERROR_CTRL[1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \ERROR_CTRL[1] .is_wysiwyg = "true";
+defparam \ERROR_CTRL[1] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[4]~input (
+	.i(KEYBOARD[4]),
+	.ibar(gnd),
+	.o(\KEYBOARD[4]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[4]~input .bus_hold = "false";
+defparam \KEYBOARD[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \ERROR_CTRL[3] (
+	.clk(\KEYBOARD[4]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(ERROR_CTRL[3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \ERROR_CTRL[3] .is_wysiwyg = "true";
+defparam \ERROR_CTRL[3] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_lcell_comb \life_counter~0 (
+// Equation(s):
+// \life_counter~0_combout  = (ERROR_CTRL[2] & (!ERROR_CTRL[0] & (!ERROR_CTRL[1] & !ERROR_CTRL[3]))) # (!ERROR_CTRL[2] & ((ERROR_CTRL[0] & (!ERROR_CTRL[1] & !ERROR_CTRL[3])) # (!ERROR_CTRL[0] & ((!ERROR_CTRL[3]) # (!ERROR_CTRL[1])))))
+
+	.dataa(ERROR_CTRL[2]),
+	.datab(ERROR_CTRL[0]),
+	.datac(ERROR_CTRL[1]),
+	.datad(ERROR_CTRL[3]),
+	.cin(gnd),
+	.combout(\life_counter~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \life_counter~0 .lut_mask = 16'h0117;
+defparam \life_counter~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \life_counter~1 (
+// Equation(s):
+// \life_counter~1_combout  = (ERROR_CTRL[2] & ((ERROR_CTRL[0] & (!ERROR_CTRL[1] & !ERROR_CTRL[3])) # (!ERROR_CTRL[0] & (ERROR_CTRL[1] $ (ERROR_CTRL[3]))))) # (!ERROR_CTRL[2] & (ERROR_CTRL[0] $ (ERROR_CTRL[1] $ (!ERROR_CTRL[3]))))
+
+	.dataa(ERROR_CTRL[2]),
+	.datab(ERROR_CTRL[0]),
+	.datac(ERROR_CTRL[1]),
+	.datad(ERROR_CTRL[3]),
+	.cin(gnd),
+	.combout(\life_counter~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \life_counter~1 .lut_mask = 16'h1669;
+defparam \life_counter~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[6]~input (
+	.i(KEYBOARD[6]),
+	.ibar(gnd),
+	.o(\KEYBOARD[6]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[6]~input .bus_hold = "false";
+defparam \KEYBOARD[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \ERROR_CTRL[5] (
+	.clk(\KEYBOARD[6]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(ERROR_CTRL[5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \ERROR_CTRL[5] .is_wysiwyg = "true";
+defparam \ERROR_CTRL[5] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[5]~input (
+	.i(KEYBOARD[5]),
+	.ibar(gnd),
+	.o(\KEYBOARD[5]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[5]~input .bus_hold = "false";
+defparam \KEYBOARD[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \ERROR_CTRL[4] (
+	.clk(\KEYBOARD[5]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(ERROR_CTRL[4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \ERROR_CTRL[4] .is_wysiwyg = "true";
+defparam \ERROR_CTRL[4] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_lcell_comb \life_counter~2 (
+// Equation(s):
+// \life_counter~2_combout  = (\life_counter~0_combout  & ((\life_counter~1_combout  & ((!ERROR_CTRL[4]) # (!ERROR_CTRL[5]))) # (!\life_counter~1_combout  & (!ERROR_CTRL[5] & !ERROR_CTRL[4]))))
+
+	.dataa(\life_counter~0_combout ),
+	.datab(\life_counter~1_combout ),
+	.datac(ERROR_CTRL[5]),
+	.datad(ERROR_CTRL[4]),
+	.cin(gnd),
+	.combout(\life_counter~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \life_counter~2 .lut_mask = 16'h088A;
+defparam \life_counter~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \life_counter~3 (
+// Equation(s):
+// \life_counter~3_combout  = (\life_counter~0_combout  & (\life_counter~1_combout  $ (ERROR_CTRL[5] $ (ERROR_CTRL[4])))) # (!\life_counter~0_combout  & (\life_counter~1_combout  & (!ERROR_CTRL[5] & !ERROR_CTRL[4])))
+
+	.dataa(\life_counter~0_combout ),
+	.datab(\life_counter~1_combout ),
+	.datac(ERROR_CTRL[5]),
+	.datad(ERROR_CTRL[4]),
+	.cin(gnd),
+	.combout(\life_counter~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \life_counter~3 .lut_mask = 16'h822C;
+defparam \life_counter~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[8]~input (
+	.i(KEYBOARD[8]),
+	.ibar(gnd),
+	.o(\KEYBOARD[8]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[8]~input .bus_hold = "false";
+defparam \KEYBOARD[8]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \ERROR_CTRL[7] (
+	.clk(\KEYBOARD[8]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(ERROR_CTRL[7]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \ERROR_CTRL[7] .is_wysiwyg = "true";
+defparam \ERROR_CTRL[7] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[7]~input (
+	.i(KEYBOARD[7]),
+	.ibar(gnd),
+	.o(\KEYBOARD[7]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[7]~input .bus_hold = "false";
+defparam \KEYBOARD[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \ERROR_CTRL[6] (
+	.clk(\KEYBOARD[7]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(ERROR_CTRL[6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \ERROR_CTRL[6] .is_wysiwyg = "true";
+defparam \ERROR_CTRL[6] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_lcell_comb \life_counter~4 (
+// Equation(s):
+// \life_counter~4_combout  = (\life_counter~2_combout  & ((\life_counter~3_combout  & ((!ERROR_CTRL[6]) # (!ERROR_CTRL[7]))) # (!\life_counter~3_combout  & (!ERROR_CTRL[7] & !ERROR_CTRL[6]))))
+
+	.dataa(\life_counter~2_combout ),
+	.datab(\life_counter~3_combout ),
+	.datac(ERROR_CTRL[7]),
+	.datad(ERROR_CTRL[6]),
+	.cin(gnd),
+	.combout(\life_counter~4_combout ),
+	.cout());
+// synopsys translate_off
+defparam \life_counter~4 .lut_mask = 16'h088A;
+defparam \life_counter~4 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \life_counter~5 (
+// Equation(s):
+// \life_counter~5_combout  = (\life_counter~2_combout  & (\life_counter~3_combout  $ (ERROR_CTRL[7] $ (ERROR_CTRL[6])))) # (!\life_counter~2_combout  & (\life_counter~3_combout  & (!ERROR_CTRL[7] & !ERROR_CTRL[6])))
+
+	.dataa(\life_counter~2_combout ),
+	.datab(\life_counter~3_combout ),
+	.datac(ERROR_CTRL[7]),
+	.datad(ERROR_CTRL[6]),
+	.cin(gnd),
+	.combout(\life_counter~5_combout ),
+	.cout());
+// synopsys translate_off
+defparam \life_counter~5 .lut_mask = 16'h822C;
+defparam \life_counter~5 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[11]~input (
+	.i(KEYBOARD[11]),
+	.ibar(gnd),
+	.o(\KEYBOARD[11]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[11]~input .bus_hold = "false";
+defparam \KEYBOARD[11]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \ERROR_CTRL[9] (
+	.clk(\KEYBOARD[11]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(ERROR_CTRL[9]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \ERROR_CTRL[9] .is_wysiwyg = "true";
+defparam \ERROR_CTRL[9] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[9]~input (
+	.i(KEYBOARD[9]),
+	.ibar(gnd),
+	.o(\KEYBOARD[9]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[9]~input .bus_hold = "false";
+defparam \KEYBOARD[9]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \ERROR_CTRL[8] (
+	.clk(\KEYBOARD[9]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(ERROR_CTRL[8]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \ERROR_CTRL[8] .is_wysiwyg = "true";
+defparam \ERROR_CTRL[8] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_lcell_comb \life_counter~6 (
+// Equation(s):
+// \life_counter~6_combout  = (\life_counter~4_combout  & ((\life_counter~5_combout  & ((!ERROR_CTRL[8]) # (!ERROR_CTRL[9]))) # (!\life_counter~5_combout  & (!ERROR_CTRL[9] & !ERROR_CTRL[8]))))
+
+	.dataa(\life_counter~4_combout ),
+	.datab(\life_counter~5_combout ),
+	.datac(ERROR_CTRL[9]),
+	.datad(ERROR_CTRL[8]),
+	.cin(gnd),
+	.combout(\life_counter~6_combout ),
+	.cout());
+// synopsys translate_off
+defparam \life_counter~6 .lut_mask = 16'h088A;
+defparam \life_counter~6 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \life_counter~7 (
+// Equation(s):
+// \life_counter~7_combout  = (\life_counter~4_combout  & (\life_counter~5_combout  $ (ERROR_CTRL[9] $ (ERROR_CTRL[8])))) # (!\life_counter~4_combout  & (\life_counter~5_combout  & (!ERROR_CTRL[9] & !ERROR_CTRL[8])))
+
+	.dataa(\life_counter~4_combout ),
+	.datab(\life_counter~5_combout ),
+	.datac(ERROR_CTRL[9]),
+	.datad(ERROR_CTRL[8]),
+	.cin(gnd),
+	.combout(\life_counter~7_combout ),
+	.cout());
+// synopsys translate_off
+defparam \life_counter~7 .lut_mask = 16'h822C;
+defparam \life_counter~7 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \KEYBOARD[14]~input (
+	.i(KEYBOARD[14]),
+	.ibar(gnd),
+	.o(\KEYBOARD[14]~input_o ));
+// synopsys translate_off
+defparam \KEYBOARD[14]~input .bus_hold = "false";
+defparam \KEYBOARD[14]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \ERROR_CTRL[10] (
+	.clk(\KEYBOARD[14]~input_o ),
+	.d(vcc),
+	.asdata(vcc),
+	.clrn(!\START~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(ERROR_CTRL[10]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \ERROR_CTRL[10] .is_wysiwyg = "true";
+defparam \ERROR_CTRL[10] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_lcell_comb \life_counter~8 (
+// Equation(s):
+// \life_counter~8_combout  = (\life_counter~7_combout  & ((ERROR_CTRL[10]))) # (!\life_counter~7_combout  & ((!ERROR_CTRL[10]) # (!\life_counter~6_combout )))
+
+	.dataa(\life_counter~6_combout ),
+	.datab(gnd),
+	.datac(\life_counter~7_combout ),
+	.datad(ERROR_CTRL[10]),
+	.cin(gnd),
+	.combout(\life_counter~8_combout ),
+	.cout());
+// synopsys translate_off
+defparam \life_counter~8 .lut_mask = 16'hF50F;
+defparam \life_counter~8 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+dffeas \life_process:life_counter[0] (
+	.clk(\CLK~input_o ),
+	.d(\life_counter~8_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\life_process:life_counter[0]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \life_process:life_counter[0] .is_wysiwyg = "true";
+defparam \life_process:life_counter[0] .power_up = "low";
+// synopsys translate_on
+
+cycloneive_lcell_comb \life_counter~9 (
+// Equation(s):
+// \life_counter~9_combout  = ((!\life_counter~7_combout  & ERROR_CTRL[10])) # (!\life_counter~6_combout )
+
+	.dataa(\life_counter~6_combout ),
+	.datab(\life_counter~7_combout ),
+	.datac(gnd),
+	.datad(ERROR_CTRL[10]),
+	.cin(gnd),
+	.combout(\life_counter~9_combout ),
+	.cout());
+// synopsys translate_off
+defparam \life_counter~9 .lut_mask = 16'h7755;
+defparam \life_counter~9 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+dffeas \life_process:life_counter[1] (
+	.clk(\CLK~input_o ),
+	.d(\life_counter~9_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\life_process:life_counter[1]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \life_process:life_counter[1] .is_wysiwyg = "true";
+defparam \life_process:life_counter[1] .power_up = "low";
+// synopsys translate_on
+
+assign MASK[0] = \MASK[0]~output_o ;
+
+assign MASK[1] = \MASK[1]~output_o ;
+
+assign MASK[2] = \MASK[2]~output_o ;
+
+assign MASK[3] = \MASK[3]~output_o ;
+
+assign MASK[4] = \MASK[4]~output_o ;
+
+assign MASK[5] = \MASK[5]~output_o ;
+
+assign LIFE[0] = \LIFE[0]~output_o ;
+
+assign LIFE[1] = \LIFE[1]~output_o ;
+
+endmodule

@@ -1,0 +1,653 @@
+$comment
+	File created using the following command:
+		vcd file letter_verification.msim.vcd -direction
+$end
+$date
+	Tue Oct 05 10:04:49 2021
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module letter_verification_vlg_vec_tst $end
+$var reg 1 ! CLK $end
+$var reg 16 " KEYBOARD [15:0] $end
+$var reg 1 # START $end
+$var wire 1 $ LIFE [1] $end
+$var wire 1 % LIFE [0] $end
+$var wire 1 & MASK [5] $end
+$var wire 1 ' MASK [4] $end
+$var wire 1 ( MASK [3] $end
+$var wire 1 ) MASK [2] $end
+$var wire 1 * MASK [1] $end
+$var wire 1 + MASK [0] $end
+
+$scope module i1 $end
+$var wire 1 , gnd $end
+$var wire 1 - vcc $end
+$var wire 1 . unknown $end
+$var tri1 1 / devclrn $end
+$var tri1 1 0 devpor $end
+$var tri1 1 1 devoe $end
+$var wire 1 2 MASK[0]~output_o $end
+$var wire 1 3 MASK[1]~output_o $end
+$var wire 1 4 MASK[2]~output_o $end
+$var wire 1 5 MASK[3]~output_o $end
+$var wire 1 6 MASK[4]~output_o $end
+$var wire 1 7 MASK[5]~output_o $end
+$var wire 1 8 LIFE[0]~output_o $end
+$var wire 1 9 LIFE[1]~output_o $end
+$var wire 1 : KEYBOARD[10]~input_o $end
+$var wire 1 ; START~input_o $end
+$var wire 1 < KEYBOARD[13]~input_o $end
+$var wire 1 = KEYBOARD[12]~input_o $end
+$var wire 1 > KEYBOARD[0]~input_o $end
+$var wire 1 ? KEYBOARD[15]~input_o $end
+$var wire 1 @ CLK~input_o $end
+$var wire 1 A KEYBOARD[3]~input_o $end
+$var wire 1 B KEYBOARD[1]~input_o $end
+$var wire 1 C KEYBOARD[2]~input_o $end
+$var wire 1 D KEYBOARD[4]~input_o $end
+$var wire 1 E life_counter~0_combout $end
+$var wire 1 F life_counter~1_combout $end
+$var wire 1 G KEYBOARD[6]~input_o $end
+$var wire 1 H KEYBOARD[5]~input_o $end
+$var wire 1 I life_counter~2_combout $end
+$var wire 1 J life_counter~3_combout $end
+$var wire 1 K KEYBOARD[8]~input_o $end
+$var wire 1 L KEYBOARD[7]~input_o $end
+$var wire 1 M life_counter~4_combout $end
+$var wire 1 N life_counter~5_combout $end
+$var wire 1 O KEYBOARD[11]~input_o $end
+$var wire 1 P KEYBOARD[9]~input_o $end
+$var wire 1 Q life_counter~6_combout $end
+$var wire 1 R life_counter~7_combout $end
+$var wire 1 S KEYBOARD[14]~input_o $end
+$var wire 1 T life_counter~8_combout $end
+$var wire 1 U life_process:life_counter[0]~q $end
+$var wire 1 V life_counter~9_combout $end
+$var wire 1 W life_process:life_counter[1]~q $end
+$var wire 1 X MASK_CTRL [5] $end
+$var wire 1 Y MASK_CTRL [4] $end
+$var wire 1 Z MASK_CTRL [3] $end
+$var wire 1 [ MASK_CTRL [2] $end
+$var wire 1 \ MASK_CTRL [1] $end
+$var wire 1 ] MASK_CTRL [0] $end
+$var wire 1 ^ ERROR_CTRL [10] $end
+$var wire 1 _ ERROR_CTRL [9] $end
+$var wire 1 ` ERROR_CTRL [8] $end
+$var wire 1 a ERROR_CTRL [7] $end
+$var wire 1 b ERROR_CTRL [6] $end
+$var wire 1 c ERROR_CTRL [5] $end
+$var wire 1 d ERROR_CTRL [4] $end
+$var wire 1 e ERROR_CTRL [3] $end
+$var wire 1 f ERROR_CTRL [2] $end
+$var wire 1 g ERROR_CTRL [1] $end
+$var wire 1 h ERROR_CTRL [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b0 "
+0#
+1%
+1$
+0+
+0*
+0)
+0(
+0'
+0&
+0,
+1-
+x.
+1/
+10
+11
+02
+03
+04
+05
+06
+07
+18
+19
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+1E
+1F
+0G
+0H
+1I
+1J
+0K
+0L
+1M
+1N
+0O
+0P
+1Q
+1R
+0S
+0T
+0U
+0V
+0W
+0]
+0\
+0[
+0Z
+0Y
+0X
+0h
+0g
+0f
+0e
+0d
+0c
+0b
+0a
+0`
+0_
+0^
+$end
+#10000
+1!
+1@
+#20000
+0!
+0@
+#30000
+b1 "
+1!
+1>
+1@
+1Y
+16
+1'
+#40000
+0!
+0@
+#50000
+1!
+1@
+#60000
+b11 "
+0!
+1B
+0@
+1h
+0F
+0J
+0N
+0R
+1T
+#70000
+1!
+1@
+1U
+08
+0%
+#80000
+0!
+0@
+#90000
+b111 "
+1!
+1C
+1@
+1g
+1F
+0E
+1J
+0I
+1N
+0M
+1R
+0Q
+1V
+0T
+#100000
+0!
+0@
+#110000
+1!
+1@
+1W
+0U
+18
+09
+0$
+1%
+#120000
+0!
+0@
+#130000
+b1111 "
+1!
+1A
+1@
+1f
+0F
+0J
+0N
+0R
+1T
+#140000
+0!
+0@
+#150000
+1!
+1@
+1U
+08
+0%
+#160000
+b11111 "
+0!
+1D
+0@
+1e
+#170000
+1!
+1@
+#180000
+0!
+0@
+#190000
+1!
+1@
+#200000
+0!
+0@
+#210000
+1!
+1@
+#220000
+b1111 "
+0!
+0D
+0@
+#230000
+1!
+1@
+#240000
+0!
+0@
+#250000
+1!
+1@
+#260000
+1#
+b1110 "
+b1100 "
+b1000 "
+b0 "
+0!
+1;
+0>
+0B
+0C
+0A
+0@
+0f
+0h
+0g
+0e
+0Y
+06
+1F
+1E
+0'
+1J
+1I
+1N
+1M
+1R
+1Q
+0V
+0T
+#270000
+1!
+1@
+0W
+0U
+18
+19
+1$
+1%
+#280000
+0!
+0@
+#290000
+1!
+1@
+#300000
+0!
+0@
+#310000
+1!
+1@
+#320000
+0!
+0@
+#330000
+1!
+1@
+#340000
+0!
+0@
+#350000
+1!
+1@
+#360000
+0!
+0@
+#370000
+0#
+1!
+0;
+1@
+#380000
+0!
+0@
+#390000
+1!
+1@
+#400000
+b1 "
+0!
+1>
+0@
+1Y
+16
+1'
+#410000
+1!
+1@
+#420000
+b10000000001 "
+0!
+1:
+0@
+1[
+1]
+12
+14
+1)
+1+
+#430000
+1!
+1@
+#440000
+0!
+0@
+#450000
+b10000100001 "
+1!
+1H
+1@
+1d
+0J
+0N
+0R
+1T
+#460000
+0!
+0@
+#470000
+1!
+1@
+1U
+08
+0%
+#480000
+b1010000100001 "
+0!
+1=
+0@
+1Z
+15
+1(
+#490000
+b1010100100001 "
+1!
+1K
+1@
+1a
+1N
+0M
+1R
+0Q
+1V
+0T
+#500000
+0!
+0@
+#510000
+1!
+1@
+1W
+0U
+18
+09
+0$
+1%
+#520000
+b11010100100001 "
+0!
+1<
+0@
+1\
+13
+1*
+#530000
+1!
+1@
+#540000
+b11010100000001 "
+0!
+0H
+0@
+#550000
+1!
+1@
+#560000
+0!
+0@
+#570000
+b1011010100000001 "
+1!
+1?
+1@
+1X
+17
+1&
+#580000
+0!
+0@
+#590000
+1!
+1@
+#600000
+0!
+0@
+#610000
+1!
+1@
+#620000
+0!
+0@
+#630000
+1!
+1@
+#640000
+1#
+0!
+1;
+0@
+0d
+0a
+0]
+0\
+0[
+0Z
+0Y
+0X
+07
+06
+05
+04
+03
+02
+1J
+0N
+1M
+0+
+0*
+0)
+0(
+0'
+0&
+1N
+0R
+1Q
+1R
+0V
+1T
+0T
+#650000
+1!
+1@
+0W
+19
+1$
+#660000
+0!
+0@
+#670000
+1!
+1@
+#680000
+0!
+0@
+#690000
+1!
+1@
+#700000
+0!
+0@
+#710000
+1!
+1@
+#720000
+0!
+0@
+#730000
+1!
+1@
+#740000
+0!
+0@
+#750000
+1!
+1@
+#760000
+0!
+0@
+#770000
+1!
+1@
+#780000
+0!
+0@
+#790000
+1!
+1@
+#800000
+0!
+0@
+#810000
+1!
+1@
+#820000
+0!
+0@
+#830000
+1!
+1@
+#840000
+0#
+0!
+0;
+0@
+#850000
+1!
+1@
+#860000
+0!
+0@
+#870000
+1!
+1@
+#880000
+0!
+0@
+#890000
+1!
+1@
+#900000
+0!
+0@
+#910000
+1!
+1@
+#920000
+b11010100000001 "
+0!
+0?
+0@
+#930000
+1!
+1@
+#940000
+0!
+0@
+#950000
+b10010100000001 "
+1!
+0=
+1@
+#960000
+b10010100000000 "
+0!
+0>
+0@
+#970000
+1!
+1@
+#980000
+b10010000000000 "
+0!
+0K
+0@
+#990000
+b10000000000000 "
+1!
+0:
+1@
+#1000000

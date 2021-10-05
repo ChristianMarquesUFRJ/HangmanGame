@@ -1,0 +1,175 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/05/2021 10:04:45"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          letter_verification
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module letter_verification_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLK;
+reg [15:0] KEYBOARD;
+reg START;
+// wires                                               
+wire [1:0] LIFE;
+wire [5:0] MASK;
+
+// assign statements (if any)                          
+letter_verification i1 (
+// port map - connection between master ports and signals/registers   
+	.CLK(CLK),
+	.KEYBOARD(KEYBOARD),
+	.LIFE(LIFE),
+	.MASK(MASK),
+	.START(START)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// CLK
+always
+begin
+	CLK = 1'b0;
+	CLK = #10000 1'b1;
+	#10000;
+end 
+
+// START
+initial
+begin
+	START = 1'b0;
+	START = #260000 1'b1;
+	START = #110000 1'b0;
+	START = #270000 1'b1;
+	START = #200000 1'b0;
+end 
+// KEYBOARD[ 15 ]
+initial
+begin
+	KEYBOARD[15] = 1'b0;
+	KEYBOARD[15] = #570000 1'b1;
+	KEYBOARD[15] = #350000 1'b0;
+end 
+// KEYBOARD[ 14 ]
+initial
+begin
+	KEYBOARD[14] = 1'b0;
+end 
+// KEYBOARD[ 13 ]
+initial
+begin
+	KEYBOARD[13] = 1'b0;
+	KEYBOARD[13] = #520000 1'b1;
+end 
+// KEYBOARD[ 12 ]
+initial
+begin
+	KEYBOARD[12] = 1'b0;
+	KEYBOARD[12] = #480000 1'b1;
+	KEYBOARD[12] = #470000 1'b0;
+end 
+// KEYBOARD[ 11 ]
+initial
+begin
+	KEYBOARD[11] = 1'b0;
+end 
+// KEYBOARD[ 10 ]
+initial
+begin
+	KEYBOARD[10] = 1'b0;
+	KEYBOARD[10] = #420000 1'b1;
+	KEYBOARD[10] = #570000 1'b0;
+end 
+// KEYBOARD[ 9 ]
+initial
+begin
+	KEYBOARD[9] = 1'b0;
+end 
+// KEYBOARD[ 8 ]
+initial
+begin
+	KEYBOARD[8] = 1'b0;
+	KEYBOARD[8] = #490000 1'b1;
+	KEYBOARD[8] = #490000 1'b0;
+end 
+// KEYBOARD[ 7 ]
+initial
+begin
+	KEYBOARD[7] = 1'b0;
+end 
+// KEYBOARD[ 6 ]
+initial
+begin
+	KEYBOARD[6] = 1'b0;
+end 
+// KEYBOARD[ 5 ]
+initial
+begin
+	KEYBOARD[5] = 1'b0;
+	KEYBOARD[5] = #450000 1'b1;
+	KEYBOARD[5] = #90000 1'b0;
+end 
+// KEYBOARD[ 4 ]
+initial
+begin
+	KEYBOARD[4] = 1'b0;
+	KEYBOARD[4] = #160000 1'b1;
+	KEYBOARD[4] = #60000 1'b0;
+end 
+// KEYBOARD[ 3 ]
+initial
+begin
+	KEYBOARD[3] = 1'b0;
+	KEYBOARD[3] = #130000 1'b1;
+	KEYBOARD[3] = #130000 1'b0;
+end 
+// KEYBOARD[ 2 ]
+initial
+begin
+	KEYBOARD[2] = 1'b0;
+	KEYBOARD[2] = #90000 1'b1;
+	KEYBOARD[2] = #170000 1'b0;
+end 
+// KEYBOARD[ 1 ]
+initial
+begin
+	KEYBOARD[1] = 1'b0;
+	KEYBOARD[1] = #60000 1'b1;
+	KEYBOARD[1] = #200000 1'b0;
+end 
+// KEYBOARD[ 0 ]
+initial
+begin
+	KEYBOARD[0] = 1'b0;
+	KEYBOARD[0] = #30000 1'b1;
+	KEYBOARD[0] = #230000 1'b0;
+	KEYBOARD[0] = #140000 1'b1;
+	KEYBOARD[0] = #560000 1'b0;
+end 
+endmodule
+
