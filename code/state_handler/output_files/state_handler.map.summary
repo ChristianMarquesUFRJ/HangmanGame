@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Oct 04 16:36:33 2021
+Analysis & Synthesis Status : Successful - Tue Oct 05 10:57:03 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : state_handler
 Top-level Entity Name : state_handler
 Family : Cyclone IV E
-Total logic elements : 32
-    Total combinational functions : 31
-    Dedicated logic registers : 16
-Total registers : 16
-Total pins : 9
+Total logic elements : 42
+    Total combinational functions : 41
+    Dedicated logic registers : 14
+Total registers : 14
+Total pins : 13
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

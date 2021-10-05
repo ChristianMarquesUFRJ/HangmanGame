@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/04/2021 16:39:27"
+-- Generated on "10/05/2021 10:57:10"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          state_handler
 -- 
@@ -35,15 +35,15 @@ ARCHITECTURE state_handler_arch OF state_handler_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL CLK : STD_LOGIC;
-SIGNAL IS_CORRECT_LETTER : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL LIFE : STD_LOGIC_VECTOR(1 DOWNTO 0);
+SIGNAL MASK : STD_LOGIC_VECTOR(5 DOWNTO 0);
 SIGNAL START : STD_LOGIC;
 SIGNAL STATE_OUT : STD_LOGIC_VECTOR(2 DOWNTO 0);
 COMPONENT state_handler
 	PORT (
 	CLK : IN STD_LOGIC;
-	IS_CORRECT_LETTER : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-	LIFE : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+	LIFE : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+	MASK : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
 	START : IN STD_LOGIC;
 	STATE_OUT : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
 	);
@@ -53,8 +53,8 @@ BEGIN
 	PORT MAP (
 -- list connections between master ports and signals
 	CLK => CLK,
-	IS_CORRECT_LETTER => IS_CORRECT_LETTER,
 	LIFE => LIFE,
+	MASK => MASK,
 	START => START,
 	STATE_OUT => STATE_OUT
 	);
@@ -83,106 +83,174 @@ BEGIN
 	START <= '1';
 	WAIT FOR 60000 ps;
 	START <= '0';
-	WAIT FOR 280000 ps;
-	START <= '1';
-	WAIT FOR 50000 ps;
-	START <= '0';
 	WAIT FOR 240000 ps;
+	START <= '1';
+	WAIT FOR 20000 ps;
+	START <= '0';
+	WAIT FOR 310000 ps;
 	START <= '1';
 	WAIT FOR 10000 ps;
 	START <= '0';
 WAIT;
 END PROCESS t_prcs_START;
--- IS_CORRECT_LETTER[1]
-t_prcs_IS_CORRECT_LETTER_1: PROCESS
+-- LIFE[1]
+t_prcs_LIFE_1: PROCESS
 BEGIN
-	IS_CORRECT_LETTER(1) <= '0';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(1) <= '1';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(1) <= '0';
-	WAIT FOR 60000 ps;
-	IS_CORRECT_LETTER(1) <= '1';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(1) <= '0';
-	WAIT FOR 120000 ps;
-	IS_CORRECT_LETTER(1) <= '1';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(1) <= '0';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(1) <= '1';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(1) <= '0';
-	WAIT FOR 160000 ps;
-	IS_CORRECT_LETTER(1) <= '1';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(1) <= '0';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(1) <= '1';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(1) <= '0';
-	WAIT FOR 60000 ps;
-	IS_CORRECT_LETTER(1) <= '1';
-	WAIT FOR 20000 ps;
-	IS_CORRECT_LETTER(1) <= '0';
-	WAIT FOR 20000 ps;
-	IS_CORRECT_LETTER(1) <= '1';
-	WAIT FOR 20000 ps;
-	IS_CORRECT_LETTER(1) <= '0';
-	WAIT FOR 160000 ps;
-	IS_CORRECT_LETTER(1) <= '1';
-	WAIT FOR 20000 ps;
-	IS_CORRECT_LETTER(1) <= '0';
-	WAIT FOR 20000 ps;
-	IS_CORRECT_LETTER(1) <= '1';
-	WAIT FOR 20000 ps;
-	IS_CORRECT_LETTER(1) <= '0';
-	WAIT FOR 20000 ps;
-	IS_CORRECT_LETTER(1) <= '1';
-	WAIT FOR 20000 ps;
-	IS_CORRECT_LETTER(1) <= '0';
-	WAIT FOR 20000 ps;
-	IS_CORRECT_LETTER(1) <= '1';
-	WAIT FOR 20000 ps;
-	IS_CORRECT_LETTER(1) <= '0';
-	WAIT FOR 20000 ps;
-	IS_CORRECT_LETTER(1) <= '1';
-	WAIT FOR 20000 ps;
-	IS_CORRECT_LETTER(1) <= '0';
-WAIT;
-END PROCESS t_prcs_IS_CORRECT_LETTER_1;
--- IS_CORRECT_LETTER[0]
-t_prcs_IS_CORRECT_LETTER_0: PROCESS
-BEGIN
-	IS_CORRECT_LETTER(0) <= '0';
-	WAIT FOR 40000 ps;
-	IS_CORRECT_LETTER(0) <= '1';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(0) <= '0';
+	LIFE(1) <= '1';
+	WAIT FOR 520000 ps;
+	LIFE(1) <= '0';
 	WAIT FOR 80000 ps;
-	IS_CORRECT_LETTER(0) <= '1';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(0) <= '0';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(0) <= '1';
-	WAIT FOR 20000 ps;
-	IS_CORRECT_LETTER(0) <= '0';
-	WAIT FOR 20000 ps;
-	IS_CORRECT_LETTER(0) <= '1';
-	WAIT FOR 20000 ps;
-	IS_CORRECT_LETTER(0) <= '0';
-	WAIT FOR 150000 ps;
-	IS_CORRECT_LETTER(0) <= '1';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(0) <= '0';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(0) <= '1';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(0) <= '0';
-	WAIT FOR 50000 ps;
-	IS_CORRECT_LETTER(0) <= '1';
-	WAIT FOR 10000 ps;
-	IS_CORRECT_LETTER(0) <= '0';
+	LIFE(1) <= '1';
 WAIT;
-END PROCESS t_prcs_IS_CORRECT_LETTER_0;
+END PROCESS t_prcs_LIFE_1;
+-- LIFE[0]
+t_prcs_LIFE_0: PROCESS
+BEGIN
+	LIFE(0) <= '1';
+	WAIT FOR 520000 ps;
+	LIFE(0) <= '0';
+	WAIT FOR 80000 ps;
+	LIFE(0) <= '1';
+WAIT;
+END PROCESS t_prcs_LIFE_0;
+-- MASK[5]
+t_prcs_MASK_5: PROCESS
+BEGIN
+	MASK(5) <= '0';
+	WAIT FOR 170000 ps;
+	MASK(5) <= '1';
+	WAIT FOR 30000 ps;
+	MASK(5) <= '0';
+	WAIT FOR 110000 ps;
+	MASK(5) <= '1';
+	WAIT FOR 40000 ps;
+	MASK(5) <= '0';
+	WAIT FOR 50000 ps;
+	MASK(5) <= '1';
+	WAIT FOR 30000 ps;
+	MASK(5) <= '0';
+	WAIT FOR 110000 ps;
+	MASK(5) <= '1';
+	WAIT FOR 40000 ps;
+	MASK(5) <= '0';
+	WAIT FOR 170000 ps;
+	MASK(5) <= '1';
+WAIT;
+END PROCESS t_prcs_MASK_5;
+-- MASK[4]
+t_prcs_MASK_4: PROCESS
+BEGIN
+	MASK(4) <= '0';
+	WAIT FOR 130000 ps;
+	MASK(4) <= '1';
+	WAIT FOR 30000 ps;
+	MASK(4) <= '0';
+	WAIT FOR 100000 ps;
+	MASK(4) <= '1';
+	WAIT FOR 30000 ps;
+	MASK(4) <= '0';
+	WAIT FOR 110000 ps;
+	MASK(4) <= '1';
+	WAIT FOR 30000 ps;
+	MASK(4) <= '0';
+	WAIT FOR 30000 ps;
+	MASK(4) <= '1';
+	WAIT FOR 30000 ps;
+	MASK(4) <= '0';
+	WAIT FOR 230000 ps;
+	MASK(4) <= '1';
+WAIT;
+END PROCESS t_prcs_MASK_4;
+-- MASK[3]
+t_prcs_MASK_3: PROCESS
+BEGIN
+	MASK(3) <= '0';
+	WAIT FOR 100000 ps;
+	MASK(3) <= '1';
+	WAIT FOR 20000 ps;
+	MASK(3) <= '0';
+	WAIT FOR 140000 ps;
+	MASK(3) <= '1';
+	WAIT FOR 30000 ps;
+	MASK(3) <= '0';
+	WAIT FOR 110000 ps;
+	MASK(3) <= '1';
+	WAIT FOR 30000 ps;
+	MASK(3) <= '0';
+	WAIT FOR 30000 ps;
+	MASK(3) <= '1';
+	WAIT FOR 30000 ps;
+	MASK(3) <= '0';
+	WAIT FOR 200000 ps;
+	MASK(3) <= '1';
+WAIT;
+END PROCESS t_prcs_MASK_3;
+-- MASK[2]
+t_prcs_MASK_2: PROCESS
+BEGIN
+	MASK(2) <= '0';
+	WAIT FOR 10000 ps;
+	MASK(2) <= '1';
+	WAIT FOR 20000 ps;
+	MASK(2) <= '0';
+	WAIT FOR 200000 ps;
+	MASK(2) <= '1';
+	WAIT FOR 20000 ps;
+	MASK(2) <= '0';
+	WAIT FOR 210000 ps;
+	MASK(2) <= '1';
+	WAIT FOR 30000 ps;
+	MASK(2) <= '0';
+	WAIT FOR 50000 ps;
+	MASK(2) <= '1';
+	WAIT FOR 40000 ps;
+	MASK(2) <= '0';
+	WAIT FOR 50000 ps;
+	MASK(2) <= '1';
+WAIT;
+END PROCESS t_prcs_MASK_2;
+-- MASK[1]
+t_prcs_MASK_1: PROCESS
+BEGIN
+	MASK(1) <= '0';
+	WAIT FOR 40000 ps;
+	MASK(1) <= '1';
+	WAIT FOR 20000 ps;
+	MASK(1) <= '0';
+	WAIT FOR 170000 ps;
+	MASK(1) <= '1';
+	WAIT FOR 20000 ps;
+	MASK(1) <= '0';
+	WAIT FOR 60000 ps;
+	MASK(1) <= '1';
+	WAIT FOR 40000 ps;
+	MASK(1) <= '0';
+	WAIT FOR 190000 ps;
+	MASK(1) <= '1';
+	WAIT FOR 40000 ps;
+	MASK(1) <= '0';
+	WAIT FOR 80000 ps;
+	MASK(1) <= '1';
+WAIT;
+END PROCESS t_prcs_MASK_1;
+-- MASK[0]
+t_prcs_MASK_0: PROCESS
+BEGIN
+	MASK(0) <= '0';
+	WAIT FOR 10000 ps;
+	MASK(0) <= '1';
+	WAIT FOR 20000 ps;
+	MASK(0) <= '0';
+	WAIT FOR 200000 ps;
+	MASK(0) <= '1';
+	WAIT FOR 20000 ps;
+	MASK(0) <= '0';
+	WAIT FOR 210000 ps;
+	MASK(0) <= '1';
+	WAIT FOR 30000 ps;
+	MASK(0) <= '0';
+	WAIT FOR 140000 ps;
+	MASK(0) <= '1';
+WAIT;
+END PROCESS t_prcs_MASK_0;
 END state_handler_arch;
