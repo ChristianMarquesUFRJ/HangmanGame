@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Oct 05 12:46:17 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : hangman
+Top-level Entity Name : hangman
+Family : Cyclone IV E
+Total logic elements : 128
+    Total combinational functions : 85
+    Dedicated logic registers : 81
+Total registers : 81
+Total pins : 70
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
