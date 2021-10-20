@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/hangman/simulation/qsim
+vhangman
+Z1 !s110 1634691874
+!i10b 1
+!s100 O>dT4:DhG6JQ>i6nP6`F30
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I`_^zc_iI=?9Sih<l<Y[@E0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1634691871
+8hangman.vo
+Fhangman.vo
+!i122 2
+L0 32 4020
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1634691873.000000
+!s107 hangman.vo|
+!s90 -work|work|hangman.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vhangman_vlg_vec_tst
+R1
+!i10b 1
+!s100 RT5i:JQ4DS@f<R<G]`cd>3
+R2
+I:elz;ObOVa_8dSgQ5d8<k2
+R3
+R0
+w1634691869
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 3
+L0 30 151
+R4
+r1
+!s85 0
+31
+!s108 1634691874.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6

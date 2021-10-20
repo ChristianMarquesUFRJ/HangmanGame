@@ -3,7 +3,7 @@ $comment
 		vcd file letter_verification.msim.vcd -direction
 $end
 $date
-	Tue Oct 05 10:04:49 2021
+	Tue Oct 19 22:16:28 2021
 $end
 $version
 	ModelSim Version 2020.1

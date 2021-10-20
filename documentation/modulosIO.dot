@@ -1,0 +1,104 @@
+// Labsland
+digraph G {
+    bgcolor="white";
+    rankdir=LR;
+    graph [nodesep="0", ranksep="1"];
+    splines="false";
+    node [shape=box style="rounded,filled" margin="0.3,0.2" color="#07195E" fontcolor="white"]; "Labsland";
+    node [shape=box margin="0,0" color="transparent" fontcolor="black"];
+    
+    // Entradas
+    "V_SW" -> "Labsland"[label="16"] [color="red"];
+    "G_CLOCK_50" -> "Labsland"[label="1"] [color="red"];
+    "V_BT" -> "Labsland"[label="1"] [color="red"];
+
+    // Saidas
+    "Labsland" -> "G_HEX7"[label="7"] [color="red"];
+    "Labsland" -> "G_HEX6"[label="7"] [color="red"];
+    "Labsland" -> "G_HEX5"[label="7"] [color="red"];
+    "Labsland" -> "G_HEX4"[label="7"] [color="red"];
+    "Labsland" -> "G_HEX3"[label="7"] [color="red"];
+    "Labsland" -> "G_HEX2"[label="7"] [color="red"];
+    "Labsland" -> "G_HEX0"[label="7"] [color="red"];
+    "Labsland" -> "G_LED"[label="3"] [color="red"];
+}
+
+// Hangman Game
+// digraph G {
+//     bgcolor="white";
+//     rankdir=LR;
+//     graph [nodesep="0", ranksep="2"];
+//     splines="false";
+//     node [shape=box style="rounded,filled" margin="0.3,0.2" color="#07195E" fontcolor="white"]; "Hangman Game";
+//     node [shape=box margin="0,0" color="transparent" fontcolor="black"];
+    
+//     // Entradas
+//     "INPUT_LETTERS" -> "Hangman Game"[label="16"] [color="red"];
+//     "CLK" -> "Hangman Game"[label="1"] [color="red"];
+//     "START" -> "Hangman Game"[label="1"] [color="red"];
+
+//     // Saidas
+//     "Hangman Game" -> "DISPLAY_LETTER_1"[label="7"] [color="red"];
+//     "Hangman Game" -> "DISPLAY_LETTER_2"[label="7"] [color="red"];
+//     "Hangman Game" -> "DISPLAY_LETTER_3"[label="7"] [color="red"];
+//     "Hangman Game" -> "DISPLAY_LETTER_4"[label="7"] [color="red"];
+//     "Hangman Game" -> "DISPLAY_LETTER_5"[label="7"] [color="red"];
+//     "Hangman Game" -> "DISPLAY_LETTER_6"[label="7"] [color="red"];
+//     "Hangman Game" -> "DISPLAY_STATUS"[label="7"] [color="red"];
+//     "Hangman Game" -> "LIFE_LEDS"[label="3"] [color="red"];
+// }
+
+// Verificação de Letras
+// digraph G {
+//     bgcolor="white";
+//     rankdir=LR;
+//     graph [nodesep="0", ranksep="0.5"];
+//     splines="false";
+//     node [shape=box style="rounded,filled" margin="0.3,0.2" color="#07195E" fontcolor="white"]; "Verificação de Letras";
+//     node [shape=box margin="0,0" color="transparent" fontcolor="black"];
+    
+//     // Entradas
+//     "KEYBOARD" -> "Verificação de Letras"[label="16"] [color="red"];
+//     "CLK" -> "Verificação de Letras"[label="1"] [color="red"];
+//     "START" -> "Verificação de Letras"[label="1"] [color="red"];
+
+//     // Saidas
+//     "Verificação de Letras" -> "MAKS"[label="6"] [color="red"];
+//     "Verificação de Letras" -> "LIFE"[label="2"] [color="red"];
+// }
+
+// Manipulador de Estados
+// digraph G {
+//     bgcolor="white";
+//     rankdir=LR;
+//     graph [nodesep="0", ranksep="0.5"];
+//     splines="false";
+//     node [shape=box style="rounded,filled" margin="0.3,0.2" color="#07195E" fontcolor="white"]; "Manipulador de Estados";
+//     node [shape=box margin="0,0" color="transparent" fontcolor="black"];
+    
+//     // Entradas
+//     "MASK" -> "Manipulador de Estados"[label="6"] [color="red"];
+//     "CLK" -> "Manipulador de Estados"[label="1"] [color="red"];
+//     "START" -> "Manipulador de Estados"[label="1"] [color="red"];
+//     "LIFE" -> "Manipulador de Estados"[label="2"] [color="red"];
+
+//     // Saidas
+//     "Manipulador de Estados" -> "STATE_OUT"[label="6"] [color="red"];
+// }
+
+// Display 7 Segmentos
+// digraph G {
+//     bgcolor="white";
+//     rankdir=LR;
+//     graph [nodesep="0", ranksep="0.5"];
+//     splines="false";
+//     node [shape=box style="rounded,filled" margin="0.3,0.2" color="#07195E" fontcolor="white"]; "Display 7 Segmentos";
+//     node [shape=box margin="0,0" color="transparent" fontcolor="black"];
+    
+//     // Entradas
+//     "VALUE_IN" -> "Display 7 Segmentos"[label="5"] [color="red"];
+//     "CLK" -> "Display 7 Segmentos"[label="1"] [color="red"];
+
+//     // Saidas
+//     "Display 7 Segmentos" -> "DISPLAY_OUT"[label="7"] [color="red"];
+// }

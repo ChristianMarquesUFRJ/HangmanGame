@@ -1,0 +1,35 @@
+digraph finite_state_machine {
+    rankdir=LR;
+    size="7"
+    node [shape=doublecircle]; Waiting Lose Win;
+    node [shape=circle];
+
+    Waiting -> Waiting [ label = "RST = 0" ];
+    Waiting -> Char0 [ label = "RST = 1" ];
+
+    Char0 -> Char0 [ label = "CL = 0" ];
+    Char0 -> Char1 [ label = "CL = 1" ];
+    Char0 -> Lose [ label = "Life = 0" ];
+
+    Char1 -> Char1 [ label = "CL = 1" ];
+    Char1 -> Char2 [ label = "CL = 2" ];
+    Char1 -> Lose [ label = "Life = 0" ];
+
+    Char2 -> Char2 [ label = "CL = 2" ];
+    Char2 -> Char3 [ label = "CL = 3" ];
+    Char2 -> Lose [ label = "Life = 0" ];
+
+    Char3 -> Char3 [ label = "CL = 3" ];
+    Char3 -> Char4 [ label = "CL = 4" ];
+    Char3 -> Lose [ label = "Life = 0" ];
+
+    Char4 -> Char4 [ label = "CL = 4" ];
+    Char4 -> Win [ label = "CL = 5" ];
+    Char4 -> Lose [ label = "Life = 0" ];
+
+    Win -> Char0 [ label = "RST = 1" ];
+    Win -> Win [ label = "RST = 0" ];
+
+    Lose -> Char0 [ label = "RST = 1" ];
+    Lose -> Lose [ label = "RST = 0" ];
+}

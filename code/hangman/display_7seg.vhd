@@ -1,6 +1,10 @@
+-- UNIVERSIDADE FEDERAL DO RIO DE JANEIRO - UFRJ
+-- Autor: Christian Marques de Oliveira Silva
+-- Disciplina: Laboratório de Sistemas Digitais
+--
 --	Objetivo: Exibir valor em um display de 7 segmentos
 --
--- Entradas: 	VALUE_IN, 
+-- Entradas: 	VALUE_IN, CLK 
 -- Saidas: 		DISPLAY_OUT
 -----------------------------------------------------------------------------------------------------
 

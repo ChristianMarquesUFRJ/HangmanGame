@@ -1,5 +1,5 @@
 Flow report for letter_verification
-Tue Oct 05 10:04:46 2021
+Tue Oct 19 22:16:25 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Oct 05 10:04:46 2021       ;
+; Flow Status                        ; Successful - Tue Oct 19 22:16:25 2021       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; letter_verification                         ;
 ; Top-level Entity Name              ; letter_verification                         ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/05/2021 09:53:00 ;
+; Start date & time ; 10/19/2021 22:13:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; letter_verification ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 31032335788819.163343837917620         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 31032335788819.163469241113720         ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -94,12 +94,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4784 MB             ; 00:00:37                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4777 MB             ; 00:00:28                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4636 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:01                           ;
-; Total                ; 00:00:24     ; --                      ; --                  ; 00:00:41                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:01                           ;
+; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:34                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,6 +115,8 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; Christian-PC     ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; Christian-PC     ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; Christian-PC     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Christian-PC     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Christian-PC     ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -120,6 +124,8 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off letter_verification -c letter_verification
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off letter_verification -c letter_verification --vector_source=C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/letter_verification/Waveform.vwf --testbench_file=C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/letter_verification/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/letter_verification/simulation/qsim/ letter_verification -c letter_verification
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off letter_verification -c letter_verification --vector_source=C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/letter_verification/Waveform.vwf --testbench_file=C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/letter_verification/simulation/qsim/Waveform.vwf.vt
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/letter_verification/simulation/qsim/ letter_verification -c letter_verification
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off letter_verification -c letter_verification --vector_source=C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/letter_verification/Waveform.vwf --testbench_file=C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/letter_verification/simulation/qsim/Waveform.vwf.vt

@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/simulation/qsim
 Estate_handler
-Z1 w1633442232
+Z1 w1634692818
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 76OUjOFMM1Jzd<9936DA;3
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 dANj__M<MaN@;H9Tkm=iP1
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -19,7 +19,7 @@ Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z9 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 112
+!i122 114
 R0
 Z10 8state_handler.vho
 Z11 Fstate_handler.vho
@@ -29,9 +29,9 @@ V=KN:@?WQo8Ng:mFaQ^h2l3
 !s100 k=nhecI<;TZonL5_>J@k33
 Z12 OV;C;2020.1;71
 32
-Z13 !s110 1633442235
+Z13 !s110 1634692822
 !i10b 1
-Z14 !s108 1633442234.000000
+Z14 !s108 1634692820.000000
 Z15 !s90 -work|work|state_handler.vho|
 Z16 !s107 state_handler.vho|
 !i113 1
@@ -47,11 +47,11 @@ R7
 R8
 R9
 DEx4 work 13 state_handler 0 22 =KN:@?WQo8Ng:mFaQ^h2l3
-!i122 112
-l134
-L47 1071
-VZ__DoY:BEc^6nWDllCPD53
-!s100 E0C7G;DP4UVj[XN]KI4VV2
+!i122 114
+l128
+L47 972
+V9h5LkBCb6?OS:cj]3@gGM2
+!s100 m9G0m;3G53K[n_Xjcj>Sa2
 R12
 32
 R13
@@ -63,10 +63,10 @@ R16
 R17
 R18
 Estate_handler_vhd_vec_tst
-Z19 w1633442230
+Z19 w1634692816
 R7
 R8
-!i122 113
+!i122 115
 R0
 Z20 8Waveform.vwf.vht
 Z21 FWaveform.vwf.vht
@@ -78,7 +78,7 @@ R12
 32
 R13
 !i10b 1
-Z22 !s108 1633442235.000000
+Z22 !s108 1634692822.000000
 Z23 !s90 -work|work|Waveform.vwf.vht|
 Z24 !s107 Waveform.vwf.vht|
 !i113 1
@@ -88,7 +88,7 @@ Astate_handler_arch
 R7
 R8
 Z25 DEx4 work 25 state_handler_vhd_vec_tst 0 22 Q<:Qk[UGY=BIEZl28cb<?2
-!i122 113
+!i122 115
 l51
 Z26 L34 223
 Z27 VnOdbLMJC_NUUk>FX7Gco71

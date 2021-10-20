@@ -2,11 +2,11 @@
 -- Autor: Christian Marques de Oliveira Silva
 -- Disciplina: Laboratório de Sistemas Digitais
 --
---	Objetivo: 
+--	Objetivo: Interfacear os pinos do LabsLand com o componente do jogo. Isso permite que as variáveis 
+-- 				do jogo sejam mais intuitivas. 
 --
---	Requisitos:
---
---	Funcionamento
+--	Entradas: 	V_SW, V_BT, G_CLOCK_50
+--  Saidas:     G_HEX(7-2), G_HEX0, G_LED
 --		
 -----------------------------------------------------------------------------------------------------
 
@@ -22,7 +22,7 @@ use IEEE.std_logic_1164.all;
 ------------------------------------
 entity labsland is port(
 	V_SW		:	in	std_logic_vector(15 downto 0);	-- Entradas das letras
-	V_BT		: 	in std_logic_vector(1 downto 0);	-- Botao de Start
+	V_BT		: 	in 	std_logic_vector(1 downto 0);	-- Botao de Start
 	G_CLOCK_50	:	in	std_logic;						-- Clock para o funcionamento do sistema
 	G_HEX7	    :	out	std_logic_vector(6 downto 0);	-- Letra 6
 	G_HEX6	    :	out	std_logic_vector(6 downto 0);	-- Letra 5

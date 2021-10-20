@@ -16,19 +16,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "LIFE[0]",
-					"strict" : false
-				},
-				{
-					"name" : "LIFE[1]",
-					"strict" : false
-				},
-				{
-					"name" : "MASK[3]",
-					"strict" : false
-				},
-				{
-					"name" : "MASK[4]",
+					"name" : "MASK[5]",
 					"strict" : false
 				},
 				{
@@ -40,7 +28,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "MASK[5]",
+					"name" : "MASK[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MASK[4]",
 					"strict" : false
 				},
 				{
@@ -49,6 +41,14 @@
 				},
 				{
 					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "LIFE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LIFE[1]",
 					"strict" : false
 				}
 			]

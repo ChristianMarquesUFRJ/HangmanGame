@@ -1,0 +1,17 @@
+digraph G {
+    bgcolor="white";
+    node [shape=box style="rounded,filled" margin="0.3,0.2" color="#07195E" fontcolor="white"];
+
+    "Hangman Game" [height=1.5 fillcolor="yellow" fontcolor="black"];
+
+    "Reinício" -> "Hangman Game"[color="red"] [dir=forward];
+    subgraph clusterGVE {
+        {rank=same "Botões de Letras"; "Hangman Game"; "Letras Ocultas";}
+        "Hangman Game" -> "Botões de Letras"[color="red"] [dir=back] [constraint=false];
+        "Hangman Game" -> "Letras Ocultas"[color="red"];
+        color=invis;
+    };
+    "Hangman Game" -> "Clock"[dir=back] [color="red"];
+    "Hangman Game" -> "Vida Restante"[dir=forward] [color="red"];
+
+}

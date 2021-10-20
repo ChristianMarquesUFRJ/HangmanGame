@@ -1,0 +1,10 @@
+digraph G {
+    bgcolor="white";
+    rankdir=LR;
+    node [shape=box style="rounded,filled" margin="0.3,0.2" color="#07195E" fontcolor="white"];
+    
+    "Labsland" -> "Hangman Game" [color="red"];
+    "Hangman Game" -> "Verificação de Letras" [color="red"];
+    "Hangman Game" -> "Manipulador de Estados" [color="red"];
+    "Hangman Game" -> "Display 7 Segmentos" [color="red"];
+}

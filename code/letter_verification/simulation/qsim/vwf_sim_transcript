@@ -26,12 +26,10 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 05 10:04:44 2021
+    Info: Processing started: Tue Oct 19 22:16:22 2021
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off letter_verification -c letter_verification --vector_source=C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/letter_verification/Waveform.vwf --testbench_file=C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/letter_verification/simulation/qsim/Waveform.vwf.vt
 Info (119004): Automatically selected device EP4CE6E22C6 for design letter_verification
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-
-2]" in vector source file when writing test bench files
 
 Completed successfully. 
 
@@ -58,14 +56,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 05 10:04:45 2021
+    Info: Processing started: Tue Oct 19 22:16:24 2021
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/letter_verification/simulation/qsim/ letter_verification -c letter_verification
 Info (119004): Automatically selected device EP4CE6E22C6 for design letter_verification
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file letter_verification.vo in folder "C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/letter_verification/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4642 megabytes
-    Info: Processing ended: Tue Oct 05 10:04:46 2021
+    Info: Processing ended: Tue Oct 19 22:16:25 2021
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -90,29 +88,29 @@ Reading pref.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:04:48 on Oct 05,2021
+# Start time: 22:16:27 on Oct 19,2021
 # vlog -work work letter_verification.vo 
 
 # -- Compiling module letter_verification
 # 
 # Top level modules:
 # 	letter_verification
-# End time: 10:04:48 on Oct 05,2021, Elapsed time: 0:00:00
+# End time: 22:16:27 on Oct 19,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:04:48 on Oct 05,2021
+# Start time: 22:16:27 on Oct 19,2021
 # vlog -work work Waveform.vwf.vt 
-
 # -- Compiling module letter_verification_vlg_vec_tst
+
 # 
 # Top level modules:
 # 	letter_verification_vlg_vec_tst
-# End time: 10:04:48 on Oct 05,2021, Elapsed time: 0:00:00
+# End time: 22:16:27 on Oct 19,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.letter_verification_vlg_vec_tst 
-# Start time: 10:04:48 on Oct 05,2021
+# Start time: 22:16:27 on Oct 19,2021
 # Loading work.letter_verification_vlg_vec_tst
 # Loading work.letter_verification
 # Loading cycloneive_ver.cycloneive_io_obuf
@@ -123,7 +121,7 @@ Reading pref.tcl
 # after#25
 # ** Note: $finish    : Waveform.vwf.vt(51)
 #    Time: 1 us  Iteration: 0  Instance: /letter_verification_vlg_vec_tst
-# End time: 10:04:49 on Oct 05,2021, Elapsed time: 0:00:01
+# End time: 22:16:28 on Oct 19,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -136,65 +134,7 @@ Reading C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/letter_verific
 
 Processing channel transitions... 
 
-Warning: OUT_KEY[15] - signal not found in VCD.
-
-Warning: OUT_KEY[14] - signal not found in VCD.
-
-Warning: OUT_KEY[13] - signal not found in VCD.
-
-Warning: OUT_KEY[12] - signal not found in VCD.
-
-Warning: OUT_KEY[11] - signal not found in VCD.
-
-Warning: OUT_KEY[10] - signal not found in VCD.
-
-Warning: OUT_KEY[9] - signal not found in VCD.
-
-Warning: OUT_KEY[8] - signal not found in VCD.
-
-Warning: OUT_KEY[7] - signal not found in VCD.
-
-Warning: OUT_KEY[6] - signal not found in VCD.
-
-Warning: OUT_KEY[5] - signal not found in VCD.
-
-Warning: OUT_KEY[4] - signal not found in VCD.
-
-Warning: OUT_KEY[3] - signal not found in VCD.
-
-Warning: OUT_KEY[2] - signal not found in VCD.
-
-Warning: OUT_KEY[1] - signal not found in VCD.
-
-Warning: OUT_KEY[0] - signal not found in VCD.
-
-Warning: IS_CORRECT_LETTER[1] - signal not found in VCD.
-
-Warning: IS_CORRECT_LETTER[0] - signal not found in VCD.
-
-Warning: ERRO[10] - signal not found in VCD.
-
-Warning: ERRO[9] - signal not found in VCD.
-
-Warning: ERRO[8] - signal not found in VCD.
-
-Warning: ERRO[7] - signal not found in VCD.
-
-Warning: ERRO[6] - signal not found in VCD.
-
-Warning: ERRO[5] - signal not found in VCD.
-
-Warning: ERRO[4] - signal not found in VCD.
-
-Warning: ERRO[3] - signal not found in VCD.
-
-Warning: ERRO[2] - signal not found in VCD.
-
-Warning: ERRO[1] - signal not found in VCD.
-
-Warning: ERRO[0] - signal not found in VCD.
-
-Writing the resulting VWF to C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/letter_verification/simulation/qsim/letter_verification_20211005100449.sim.vwf
+Writing the resulting VWF to C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/letter_verification/simulation/qsim/letter_verification_20211019221628.sim.vwf
 
 Finished VCD to VWF conversion.
 

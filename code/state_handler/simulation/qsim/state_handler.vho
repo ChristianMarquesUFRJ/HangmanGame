@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "10/05/2021 10:57:12"
+-- DATE "10/19/2021 22:20:18"
 
 -- 
 -- Device: Altera EP4CE6E22C6 Package TQFP144
@@ -64,71 +64,65 @@ SIGNAL \STATE_OUT[0]~output_o\ : std_logic;
 SIGNAL \STATE_OUT[1]~output_o\ : std_logic;
 SIGNAL \STATE_OUT[2]~output_o\ : std_logic;
 SIGNAL \CLK~input_o\ : std_logic;
-SIGNAL \LIFE[0]~input_o\ : std_logic;
-SIGNAL \LIFE[1]~input_o\ : std_logic;
-SIGNAL \current_state.Char0~0_combout\ : std_logic;
-SIGNAL \MASK[3]~input_o\ : std_logic;
-SIGNAL \MASK[4]~input_o\ : std_logic;
+SIGNAL \MASK[5]~input_o\ : std_logic;
 SIGNAL \MASK[1]~input_o\ : std_logic;
 SIGNAL \MASK[2]~input_o\ : std_logic;
-SIGNAL \letters~0_combout\ : std_logic;
-SIGNAL \MASK[5]~input_o\ : std_logic;
+SIGNAL \MASK[3]~input_o\ : std_logic;
+SIGNAL \MASK[4]~input_o\ : std_logic;
 SIGNAL \Add1~0_combout\ : std_logic;
+SIGNAL \letters~0_combout\ : std_logic;
+SIGNAL \START~input_o\ : std_logic;
 SIGNAL \letters~1_combout\ : std_logic;
 SIGNAL \letters~2_combout\ : std_logic;
 SIGNAL \letters~3_combout\ : std_logic;
-SIGNAL \START~input_o\ : std_logic;
-SIGNAL \next_state.Char1~1_combout\ : std_logic;
-SIGNAL \change_state~11_combout\ : std_logic;
 SIGNAL \letters~4_combout\ : std_logic;
-SIGNAL \change_state~9_combout\ : std_logic;
-SIGNAL \next_state.Char4~1_combout\ : std_logic;
-SIGNAL \next_state.Char1~q\ : std_logic;
-SIGNAL \current_state.Char1~0_combout\ : std_logic;
-SIGNAL \current_state.Char1~1_combout\ : std_logic;
-SIGNAL \current_state.Char1~q\ : std_logic;
-SIGNAL \next_state.Char0~3_combout\ : std_logic;
-SIGNAL \next_state.Char2~1_combout\ : std_logic;
-SIGNAL \next_state.Char2~q\ : std_logic;
-SIGNAL \current_state.Char2~0_combout\ : std_logic;
-SIGNAL \current_state.Char2~q\ : std_logic;
-SIGNAL \next_state.Win~1_combout\ : std_logic;
-SIGNAL \next_state.Win~2_combout\ : std_logic;
-SIGNAL \next_state.Char4~2_combout\ : std_logic;
-SIGNAL \next_state.Win~3_combout\ : std_logic;
-SIGNAL \next_state.Win~q\ : std_logic;
-SIGNAL \current_state.Win~2_combout\ : std_logic;
-SIGNAL \current_state.Win~q\ : std_logic;
-SIGNAL \change_state~12_combout\ : std_logic;
-SIGNAL \current_state.Waiting~q\ : std_logic;
-SIGNAL \current_state.Lose~0_combout\ : std_logic;
-SIGNAL \current_state.Lose~1_combout\ : std_logic;
-SIGNAL \current_state.Lose~q\ : std_logic;
-SIGNAL \current_state.Win~3_combout\ : std_logic;
-SIGNAL \change_state~15_combout\ : std_logic;
-SIGNAL \change_state~16_combout\ : std_logic;
-SIGNAL \next_state.Char3~1_combout\ : std_logic;
-SIGNAL \next_state.Char3~q\ : std_logic;
-SIGNAL \current_state.Char3~0_combout\ : std_logic;
-SIGNAL \current_state.Char3~q\ : std_logic;
-SIGNAL \change_state~8_combout\ : std_logic;
 SIGNAL \change_state~13_combout\ : std_logic;
+SIGNAL \next_state.Char4~1_combout\ : std_logic;
 SIGNAL \change_state~14_combout\ : std_logic;
-SIGNAL \next_state.Char4~3_combout\ : std_logic;
+SIGNAL \next_state.Char3~1_combout\ : std_logic;
+SIGNAL \next_state.Char3~2_combout\ : std_logic;
+SIGNAL \next_state.Char3~q\ : std_logic;
+SIGNAL \current_state.Char3~1_combout\ : std_logic;
+SIGNAL \LIFE[0]~input_o\ : std_logic;
+SIGNAL \LIFE[1]~input_o\ : std_logic;
+SIGNAL \change_state~12_combout\ : std_logic;
+SIGNAL \current_state.Char0~0_combout\ : std_logic;
+SIGNAL \current_state.Char3~q\ : std_logic;
+SIGNAL \change_state~9_combout\ : std_logic;
+SIGNAL \next_state.Char1~2_combout\ : std_logic;
+SIGNAL \next_state.Char4~2_combout\ : std_logic;
 SIGNAL \next_state.Char4~q\ : std_logic;
 SIGNAL \current_state.Char4~0_combout\ : std_logic;
 SIGNAL \current_state.Char4~q\ : std_logic;
-SIGNAL \change_state~10_combout\ : std_logic;
-SIGNAL \current_state.Waiting~0_combout\ : std_logic;
-SIGNAL \next_state.Char0~q\ : std_logic;
-SIGNAL \current_state.Char0~1_combout\ : std_logic;
-SIGNAL \current_state.Char0~2_combout\ : std_logic;
+SIGNAL \change_state~8_combout\ : std_logic;
+SIGNAL \next_state.Char1~3_combout\ : std_logic;
+SIGNAL \next_state.Char1~q\ : std_logic;
+SIGNAL \current_state.Char1~0_combout\ : std_logic;
+SIGNAL \current_state.Char1~q\ : std_logic;
+SIGNAL \next_state.Char2~1_combout\ : std_logic;
+SIGNAL \next_state.Char2~2_combout\ : std_logic;
+SIGNAL \next_state.Char1~1_combout\ : std_logic;
+SIGNAL \current_state.Lose~0_combout\ : std_logic;
+SIGNAL \current_state.Lose~1_combout\ : std_logic;
+SIGNAL \current_state.Lose~q\ : std_logic;
+SIGNAL \current_state.Char3~0_combout\ : std_logic;
+SIGNAL \next_state.Char2~4_combout\ : std_logic;
+SIGNAL \next_state.Win~1_combout\ : std_logic;
+SIGNAL \next_state.Win~q\ : std_logic;
+SIGNAL \current_state.Win~0_combout\ : std_logic;
+SIGNAL \current_state.Win~q\ : std_logic;
+SIGNAL \change_state~11_combout\ : std_logic;
 SIGNAL \current_state.Char0~q\ : std_logic;
+SIGNAL \change_state~10_combout\ : std_logic;
+SIGNAL \next_state.Char2~3_combout\ : std_logic;
+SIGNAL \next_state.Char2~q\ : std_logic;
+SIGNAL \current_state.Char2~0_combout\ : std_logic;
+SIGNAL \current_state.Char2~q\ : std_logic;
 SIGNAL \STATE_OUT[0]~0_combout\ : std_logic;
 SIGNAL \STATE_OUT[1]~1_combout\ : std_logic;
 SIGNAL \STATE_OUT[2]~2_combout\ : std_logic;
-SIGNAL \ALT_INV_STATE_OUT[2]~2_combout\ : std_logic;
 SIGNAL \ALT_INV_STATE_OUT[1]~1_combout\ : std_logic;
+SIGNAL \ALT_INV_STATE_OUT[2]~2_combout\ : std_logic;
 SIGNAL \ALT_INV_STATE_OUT[0]~0_combout\ : std_logic;
 
 BEGIN
@@ -141,8 +135,8 @@ STATE_OUT <= ww_STATE_OUT;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\ALT_INV_STATE_OUT[2]~2_combout\ <= NOT \STATE_OUT[2]~2_combout\;
 \ALT_INV_STATE_OUT[1]~1_combout\ <= NOT \STATE_OUT[1]~1_combout\;
+\ALT_INV_STATE_OUT[2]~2_combout\ <= NOT \STATE_OUT[2]~2_combout\;
 \ALT_INV_STATE_OUT[0]~0_combout\ <= NOT \STATE_OUT[0]~0_combout\;
 
 \STATE_OUT[0]~output\ : cycloneive_io_obuf
@@ -188,60 +182,15 @@ PORT MAP (
 	i => ww_CLK,
 	o => \CLK~input_o\);
 
-\LIFE[0]~input\ : cycloneive_io_ibuf
+\MASK[5]~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_LIFE(0),
-	o => \LIFE[0]~input_o\);
-
-\LIFE[1]~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_LIFE(1),
-	o => \LIFE[1]~input_o\);
-
-\current_state.Char0~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \current_state.Char0~0_combout\ = (\current_state.Char0~q\ & ((\LIFE[0]~input_o\) # (\LIFE[1]~input_o\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010100010101000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \current_state.Char0~q\,
-	datab => \LIFE[0]~input_o\,
-	datac => \LIFE[1]~input_o\,
-	combout => \current_state.Char0~0_combout\);
-
-\MASK[3]~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_MASK(3),
-	o => \MASK[3]~input_o\);
-
-\MASK[4]~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_MASK(4),
-	o => \MASK[4]~input_o\);
+	i => ww_MASK(5),
+	o => \MASK[5]~input_o\);
 
 \MASK[1]~input\ : cycloneive_io_ibuf
 -- pragma translate_off
@@ -263,35 +212,29 @@ PORT MAP (
 	i => ww_MASK(2),
 	o => \MASK[2]~input_o\);
 
-\letters~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \letters~0_combout\ = (\MASK[3]~input_o\ & (\MASK[4]~input_o\ & (\MASK[1]~input_o\ & \MASK[2]~input_o\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \MASK[3]~input_o\,
-	datab => \MASK[4]~input_o\,
-	datac => \MASK[1]~input_o\,
-	datad => \MASK[2]~input_o\,
-	combout => \letters~0_combout\);
-
-\MASK[5]~input\ : cycloneive_io_ibuf
+\MASK[3]~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_MASK(5),
-	o => \MASK[5]~input_o\);
+	i => ww_MASK(3),
+	o => \MASK[3]~input_o\);
+
+\MASK[4]~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_MASK(4),
+	o => \MASK[4]~input_o\);
 
 \Add1~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Add1~0_combout\ = \MASK[3]~input_o\ $ (\MASK[4]~input_o\ $ (\MASK[1]~input_o\ $ (\MASK[2]~input_o\)))
+-- \Add1~0_combout\ = \MASK[1]~input_o\ $ (\MASK[2]~input_o\ $ (\MASK[3]~input_o\ $ (\MASK[4]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -299,59 +242,25 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \MASK[3]~input_o\,
-	datab => \MASK[4]~input_o\,
-	datac => \MASK[1]~input_o\,
-	datad => \MASK[2]~input_o\,
+	dataa => \MASK[1]~input_o\,
+	datab => \MASK[2]~input_o\,
+	datac => \MASK[3]~input_o\,
+	datad => \MASK[4]~input_o\,
 	combout => \Add1~0_combout\);
 
-\letters~1\ : cycloneive_lcell_comb
+\letters~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \letters~1_combout\ = (\MASK[3]~input_o\ & ((\MASK[4]~input_o\ & ((!\MASK[2]~input_o\) # (!\MASK[1]~input_o\))) # (!\MASK[4]~input_o\ & ((\MASK[1]~input_o\) # (\MASK[2]~input_o\))))) # (!\MASK[3]~input_o\ & ((\MASK[4]~input_o\ & ((\MASK[1]~input_o\) # 
--- (\MASK[2]~input_o\))) # (!\MASK[4]~input_o\ & (\MASK[1]~input_o\ & \MASK[2]~input_o\))))
+-- \letters~0_combout\ = \MASK[5]~input_o\ $ (\Add1~0_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111111011101000",
+	lut_mask => "0000111111110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \MASK[3]~input_o\,
-	datab => \MASK[4]~input_o\,
-	datac => \MASK[1]~input_o\,
-	datad => \MASK[2]~input_o\,
-	combout => \letters~1_combout\);
-
-\letters~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \letters~2_combout\ = (\letters~0_combout\) # ((\MASK[5]~input_o\ & (\Add1~0_combout\ & \letters~1_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110101010101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \letters~0_combout\,
-	datab => \MASK[5]~input_o\,
-	datac => \Add1~0_combout\,
-	datad => \letters~1_combout\,
-	combout => \letters~2_combout\);
-
-\letters~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \letters~3_combout\ = \letters~1_combout\ $ (((\MASK[5]~input_o\ & \Add1~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \letters~1_combout\,
 	datac => \MASK[5]~input_o\,
 	datad => \Add1~0_combout\,
-	combout => \letters~3_combout\);
+	combout => \letters~0_combout\);
 
 \START~input\ : cycloneive_io_ibuf
 -- pragma translate_off
@@ -363,514 +272,69 @@ PORT MAP (
 	i => ww_START,
 	o => \START~input_o\);
 
-\next_state.Char1~1\ : cycloneive_lcell_comb
+\letters~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \next_state.Char1~1_combout\ = (\START~input_o\ & ((\current_state.Lose~q\) # ((\current_state.Win~q\) # (!\current_state.Waiting~q\))))
+-- \letters~1_combout\ = (\MASK[1]~input_o\ & (\MASK[2]~input_o\ & (\MASK[3]~input_o\ & \MASK[4]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010100010101010",
+	lut_mask => "1000000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \START~input_o\,
-	datab => \current_state.Lose~q\,
-	datac => \current_state.Win~q\,
-	datad => \current_state.Waiting~q\,
-	combout => \next_state.Char1~1_combout\);
+	dataa => \MASK[1]~input_o\,
+	datab => \MASK[2]~input_o\,
+	datac => \MASK[3]~input_o\,
+	datad => \MASK[4]~input_o\,
+	combout => \letters~1_combout\);
 
-\change_state~11\ : cycloneive_lcell_comb
+\letters~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \change_state~11_combout\ = (\current_state.Lose~q\) # ((\current_state.Win~q\) # (!\current_state.Waiting~q\))
+-- \letters~2_combout\ = (\MASK[1]~input_o\ & ((\MASK[2]~input_o\ & ((!\MASK[4]~input_o\) # (!\MASK[3]~input_o\))) # (!\MASK[2]~input_o\ & ((\MASK[3]~input_o\) # (\MASK[4]~input_o\))))) # (!\MASK[1]~input_o\ & ((\MASK[2]~input_o\ & ((\MASK[3]~input_o\) # 
+-- (\MASK[4]~input_o\))) # (!\MASK[2]~input_o\ & (\MASK[3]~input_o\ & \MASK[4]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1110111011111111",
+	lut_mask => "0111111011101000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \current_state.Lose~q\,
-	datab => \current_state.Win~q\,
-	datad => \current_state.Waiting~q\,
-	combout => \change_state~11_combout\);
+	dataa => \MASK[1]~input_o\,
+	datab => \MASK[2]~input_o\,
+	datac => \MASK[3]~input_o\,
+	datad => \MASK[4]~input_o\,
+	combout => \letters~2_combout\);
+
+\letters~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \letters~3_combout\ = (\letters~1_combout\) # ((\MASK[5]~input_o\ & (\Add1~0_combout\ & \letters~2_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110101010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \letters~1_combout\,
+	datab => \MASK[5]~input_o\,
+	datac => \Add1~0_combout\,
+	datad => \letters~2_combout\,
+	combout => \letters~3_combout\);
 
 \letters~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \letters~4_combout\ = \MASK[5]~input_o\ $ (\Add1~0_combout\)
+-- \letters~4_combout\ = \letters~2_combout\ $ (((\MASK[5]~input_o\ & \Add1~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000111111110000",
+	lut_mask => "0011110011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
+	datab => \letters~2_combout\,
 	datac => \MASK[5]~input_o\,
 	datad => \Add1~0_combout\,
 	combout => \letters~4_combout\);
-
-\change_state~9\ : cycloneive_lcell_comb
--- Equation(s):
--- \change_state~9_combout\ = (\current_state.Char0~q\ & (\letters~4_combout\ & (!\letters~2_combout\ & !\letters~3_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \current_state.Char0~q\,
-	datab => \letters~4_combout\,
-	datac => \letters~2_combout\,
-	datad => \letters~3_combout\,
-	combout => \change_state~9_combout\);
-
-\next_state.Char4~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \next_state.Char4~1_combout\ = ((\change_state~11_combout\) # ((\change_state~8_combout\) # (\change_state~9_combout\))) # (!\next_state.Win~2_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \next_state.Win~2_combout\,
-	datab => \change_state~11_combout\,
-	datac => \change_state~8_combout\,
-	datad => \change_state~9_combout\,
-	combout => \next_state.Char4~1_combout\);
-
-\next_state.Char1\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~input_o\,
-	d => \next_state.Char1~1_combout\,
-	ena => \next_state.Char4~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \next_state.Char1~q\);
-
-\current_state.Char1~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \current_state.Char1~0_combout\ = (\change_state~11_combout\) # ((\current_state.Waiting~0_combout\) # (\current_state.Lose~0_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111011111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \change_state~11_combout\,
-	datab => \current_state.Waiting~0_combout\,
-	datac => \current_state.Lose~0_combout\,
-	combout => \current_state.Char1~0_combout\);
-
-\current_state.Char1~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \current_state.Char1~1_combout\ = (\current_state.Win~3_combout\ & ((\next_state.Char1~q\) # ((\current_state.Char1~q\ & !\current_state.Char1~0_combout\)))) # (!\current_state.Win~3_combout\ & (((\current_state.Char1~q\ & 
--- !\current_state.Char1~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000100011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \current_state.Win~3_combout\,
-	datab => \next_state.Char1~q\,
-	datac => \current_state.Char1~q\,
-	datad => \current_state.Char1~0_combout\,
-	combout => \current_state.Char1~1_combout\);
-
-\current_state.Char1\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~input_o\,
-	d => \current_state.Char1~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \current_state.Char1~q\);
-
-\next_state.Char0~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \next_state.Char0~3_combout\ = (!\change_state~8_combout\ & ((\letters~2_combout\) # ((!\next_state.Win~1_combout\) # (!\letters~3_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000010111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \letters~2_combout\,
-	datab => \letters~3_combout\,
-	datac => \next_state.Win~1_combout\,
-	datad => \change_state~8_combout\,
-	combout => \next_state.Char0~3_combout\);
-
-\next_state.Char2~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \next_state.Char2~1_combout\ = (!\change_state~11_combout\ & ((\change_state~9_combout\) # ((\next_state.Char0~3_combout\ & \next_state.Char2~q\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000011101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \change_state~9_combout\,
-	datab => \next_state.Char0~3_combout\,
-	datac => \next_state.Char2~q\,
-	datad => \change_state~11_combout\,
-	combout => \next_state.Char2~1_combout\);
-
-\next_state.Char2\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~input_o\,
-	d => \next_state.Char2~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \next_state.Char2~q\);
-
-\current_state.Char2~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \current_state.Char2~0_combout\ = (\current_state.Win~3_combout\ & ((\next_state.Char2~q\) # ((\current_state.Char2~q\ & !\current_state.Char1~0_combout\)))) # (!\current_state.Win~3_combout\ & (((\current_state.Char2~q\ & 
--- !\current_state.Char1~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000100011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \current_state.Win~3_combout\,
-	datab => \next_state.Char2~q\,
-	datac => \current_state.Char2~q\,
-	datad => \current_state.Char1~0_combout\,
-	combout => \current_state.Char2~0_combout\);
-
-\current_state.Char2\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~input_o\,
-	d => \current_state.Char2~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \current_state.Char2~q\);
-
-\next_state.Win~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \next_state.Win~1_combout\ = (\MASK[5]~input_o\ & ((\Add1~0_combout\ & (\current_state.Char1~q\)) # (!\Add1~0_combout\ & ((\current_state.Char2~q\))))) # (!\MASK[5]~input_o\ & ((\Add1~0_combout\ & ((\current_state.Char2~q\))) # (!\Add1~0_combout\ & 
--- (\current_state.Char1~q\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111011010010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \MASK[5]~input_o\,
-	datab => \Add1~0_combout\,
-	datac => \current_state.Char1~q\,
-	datad => \current_state.Char2~q\,
-	combout => \next_state.Win~1_combout\);
-
-\next_state.Win~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \next_state.Win~2_combout\ = (\letters~2_combout\) # ((!\next_state.Win~1_combout\) # (!\letters~3_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1011111110111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \letters~2_combout\,
-	datab => \letters~3_combout\,
-	datac => \next_state.Win~1_combout\,
-	combout => \next_state.Win~2_combout\);
-
-\next_state.Char4~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \next_state.Char4~2_combout\ = (!\change_state~11_combout\ & (!\change_state~9_combout\ & ((\change_state~8_combout\) # (!\next_state.Win~2_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \change_state~8_combout\,
-	datab => \next_state.Win~2_combout\,
-	datac => \change_state~11_combout\,
-	datad => \change_state~9_combout\,
-	combout => \next_state.Char4~2_combout\);
-
-\next_state.Win~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \next_state.Win~3_combout\ = (\next_state.Win~2_combout\ & ((\next_state.Char4~2_combout\) # ((\next_state.Win~q\ & !\next_state.Char4~1_combout\)))) # (!\next_state.Win~2_combout\ & (\next_state.Win~q\ & (!\next_state.Char4~1_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010111000001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \next_state.Win~2_combout\,
-	datab => \next_state.Win~q\,
-	datac => \next_state.Char4~1_combout\,
-	datad => \next_state.Char4~2_combout\,
-	combout => \next_state.Win~3_combout\);
-
-\next_state.Win\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~input_o\,
-	d => \next_state.Win~3_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \next_state.Win~q\);
-
-\current_state.Win~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \current_state.Win~2_combout\ = (\current_state.Waiting~0_combout\ & (\next_state.Win~q\ & !\change_state~11_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \current_state.Waiting~0_combout\,
-	datab => \next_state.Win~q\,
-	datad => \change_state~11_combout\,
-	combout => \current_state.Win~2_combout\);
-
-\current_state.Win\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~input_o\,
-	d => \current_state.Win~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \current_state.Win~q\);
-
-\change_state~12\ : cycloneive_lcell_comb
--- Equation(s):
--- \change_state~12_combout\ = (\START~input_o\) # ((!\current_state.Lose~q\ & (!\current_state.Win~q\ & \current_state.Waiting~q\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \current_state.Lose~q\,
-	datab => \current_state.Win~q\,
-	datac => \current_state.Waiting~q\,
-	datad => \START~input_o\,
-	combout => \change_state~12_combout\);
-
-\current_state.Waiting\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~input_o\,
-	d => \change_state~12_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \current_state.Waiting~q\);
-
-\current_state.Lose~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \current_state.Lose~0_combout\ = (\current_state.Waiting~q\ & (!\LIFE[0]~input_o\ & !\LIFE[1]~input_o\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \current_state.Waiting~q\,
-	datac => \LIFE[0]~input_o\,
-	datad => \LIFE[1]~input_o\,
-	combout => \current_state.Lose~0_combout\);
-
-\current_state.Lose~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \current_state.Lose~1_combout\ = (\current_state.Lose~0_combout\ & (!\change_state~11_combout\ & !\current_state.Waiting~0_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \current_state.Lose~0_combout\,
-	datac => \change_state~11_combout\,
-	datad => \current_state.Waiting~0_combout\,
-	combout => \current_state.Lose~1_combout\);
-
-\current_state.Lose\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~input_o\,
-	d => \current_state.Lose~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \current_state.Lose~q\);
-
-\current_state.Win~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \current_state.Win~3_combout\ = (!\current_state.Lose~q\ & (!\current_state.Win~q\ & (\current_state.Waiting~q\ & \current_state.Waiting~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \current_state.Lose~q\,
-	datab => \current_state.Win~q\,
-	datac => \current_state.Waiting~q\,
-	datad => \current_state.Waiting~0_combout\,
-	combout => \current_state.Win~3_combout\);
-
-\change_state~15\ : cycloneive_lcell_comb
--- Equation(s):
--- \change_state~15_combout\ = (\current_state.Char1~q\ & (\MASK[5]~input_o\ $ (!\Add1~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000001010000010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \current_state.Char1~q\,
-	datab => \MASK[5]~input_o\,
-	datac => \Add1~0_combout\,
-	combout => \change_state~15_combout\);
-
-\change_state~16\ : cycloneive_lcell_comb
--- Equation(s):
--- \change_state~16_combout\ = (\letters~3_combout\ & (\change_state~15_combout\ & !\letters~2_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \letters~3_combout\,
-	datab => \change_state~15_combout\,
-	datad => \letters~2_combout\,
-	combout => \change_state~16_combout\);
-
-\next_state.Char3~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \next_state.Char3~1_combout\ = (\change_state~16_combout\ & ((\next_state.Char4~2_combout\) # ((\next_state.Char3~q\ & !\next_state.Char4~1_combout\)))) # (!\change_state~16_combout\ & (\next_state.Char3~q\ & (!\next_state.Char4~1_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010111000001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \change_state~16_combout\,
-	datab => \next_state.Char3~q\,
-	datac => \next_state.Char4~1_combout\,
-	datad => \next_state.Char4~2_combout\,
-	combout => \next_state.Char3~1_combout\);
-
-\next_state.Char3\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~input_o\,
-	d => \next_state.Char3~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \next_state.Char3~q\);
-
-\current_state.Char3~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \current_state.Char3~0_combout\ = (\current_state.Win~3_combout\ & ((\next_state.Char3~q\) # ((\current_state.Char3~q\ & !\current_state.Char1~0_combout\)))) # (!\current_state.Win~3_combout\ & (((\current_state.Char3~q\ & 
--- !\current_state.Char1~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000100011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \current_state.Win~3_combout\,
-	datab => \next_state.Char3~q\,
-	datac => \current_state.Char3~q\,
-	datad => \current_state.Char1~0_combout\,
-	combout => \current_state.Char3~0_combout\);
-
-\current_state.Char3\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~input_o\,
-	d => \current_state.Char3~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \current_state.Char3~q\);
-
-\change_state~8\ : cycloneive_lcell_comb
--- Equation(s):
--- \change_state~8_combout\ = (\current_state.Char3~q\ & (\letters~2_combout\ & (!\letters~3_combout\ & !\letters~4_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \current_state.Char3~q\,
-	datab => \letters~2_combout\,
-	datac => \letters~3_combout\,
-	datad => \letters~4_combout\,
-	combout => \change_state~8_combout\);
 
 \change_state~13\ : cycloneive_lcell_comb
 -- Equation(s):
@@ -887,36 +351,207 @@ PORT MAP (
 	datad => \Add1~0_combout\,
 	combout => \change_state~13_combout\);
 
+\next_state.Char4~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \next_state.Char4~1_combout\ = (\letters~4_combout\ & (\change_state~13_combout\ & (\change_state~11_combout\ & !\letters~3_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000010000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \letters~4_combout\,
+	datab => \change_state~13_combout\,
+	datac => \change_state~11_combout\,
+	datad => \letters~3_combout\,
+	combout => \next_state.Char4~1_combout\);
+
 \change_state~14\ : cycloneive_lcell_comb
 -- Equation(s):
--- \change_state~14_combout\ = (\letters~3_combout\ & (\change_state~13_combout\ & !\letters~2_combout\))
+-- \change_state~14_combout\ = (\current_state.Char1~q\ & (\MASK[5]~input_o\ $ (!\Add1~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000010001000",
+	lut_mask => "1000001010000010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \letters~3_combout\,
-	datab => \change_state~13_combout\,
-	datad => \letters~2_combout\,
+	dataa => \current_state.Char1~q\,
+	datab => \MASK[5]~input_o\,
+	datac => \Add1~0_combout\,
 	combout => \change_state~14_combout\);
 
-\next_state.Char4~3\ : cycloneive_lcell_comb
+\next_state.Char3~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \next_state.Char4~3_combout\ = (\change_state~14_combout\ & ((\next_state.Char4~2_combout\) # ((\next_state.Char4~q\ & !\next_state.Char4~1_combout\)))) # (!\change_state~14_combout\ & (\next_state.Char4~q\ & (!\next_state.Char4~1_combout\)))
+-- \next_state.Char3~1_combout\ = (\letters~4_combout\ & (\change_state~14_combout\ & (\change_state~11_combout\ & !\letters~3_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010111000001100",
+	lut_mask => "0000000010000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \change_state~14_combout\,
+	dataa => \letters~4_combout\,
+	datab => \change_state~14_combout\,
+	datac => \change_state~11_combout\,
+	datad => \letters~3_combout\,
+	combout => \next_state.Char3~1_combout\);
+
+\next_state.Char3~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \next_state.Char3~2_combout\ = (\next_state.Char3~1_combout\) # ((\next_state.Char3~q\ & !\next_state.Char1~2_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010101011101110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \next_state.Char3~1_combout\,
+	datab => \next_state.Char3~q\,
+	datad => \next_state.Char1~2_combout\,
+	combout => \next_state.Char3~2_combout\);
+
+\next_state.Char3\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~input_o\,
+	d => \next_state.Char3~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \next_state.Char3~q\);
+
+\current_state.Char3~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \current_state.Char3~1_combout\ = (\next_state.Char3~q\ & (\change_state~11_combout\ & ((\change_state~8_combout\) # (!\next_state.Char1~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000101000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \next_state.Char3~q\,
+	datab => \change_state~8_combout\,
+	datac => \next_state.Char1~1_combout\,
+	datad => \change_state~11_combout\,
+	combout => \current_state.Char3~1_combout\);
+
+\LIFE[0]~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_LIFE(0),
+	o => \LIFE[0]~input_o\);
+
+\LIFE[1]~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_LIFE(1),
+	o => \LIFE[1]~input_o\);
+
+\change_state~12\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \change_state~12_combout\ = (!\LIFE[0]~input_o\ & !\LIFE[1]~input_o\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \LIFE[0]~input_o\,
+	datad => \LIFE[1]~input_o\,
+	combout => \change_state~12_combout\);
+
+\current_state.Char0~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \current_state.Char0~0_combout\ = ((\change_state~12_combout\) # ((\change_state~8_combout\) # (!\next_state.Char1~1_combout\))) # (!\change_state~11_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \change_state~11_combout\,
+	datab => \change_state~12_combout\,
+	datac => \change_state~8_combout\,
+	datad => \next_state.Char1~1_combout\,
+	combout => \current_state.Char0~0_combout\);
+
+\current_state.Char3\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~input_o\,
+	d => \current_state.Char3~1_combout\,
+	ena => \current_state.Char0~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \current_state.Char3~q\);
+
+\change_state~9\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \change_state~9_combout\ = (\current_state.Char3~q\ & (\letters~3_combout\ & (!\letters~0_combout\ & !\letters~4_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \current_state.Char3~q\,
+	datab => \letters~3_combout\,
+	datac => \letters~0_combout\,
+	datad => \letters~4_combout\,
+	combout => \change_state~9_combout\);
+
+\next_state.Char1~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \next_state.Char1~2_combout\ = ((\change_state~9_combout\) # ((\change_state~10_combout\) # (!\next_state.Char2~2_combout\))) # (!\change_state~11_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \change_state~11_combout\,
+	datab => \change_state~9_combout\,
+	datac => \change_state~10_combout\,
+	datad => \next_state.Char2~2_combout\,
+	combout => \next_state.Char1~2_combout\);
+
+\next_state.Char4~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \next_state.Char4~2_combout\ = (\next_state.Char4~1_combout\) # ((\next_state.Char4~q\ & !\next_state.Char1~2_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010101011101110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \next_state.Char4~1_combout\,
 	datab => \next_state.Char4~q\,
-	datac => \next_state.Char4~1_combout\,
-	datad => \next_state.Char4~2_combout\,
-	combout => \next_state.Char4~3_combout\);
+	datad => \next_state.Char1~2_combout\,
+	combout => \next_state.Char4~2_combout\);
 
 \next_state.Char4\ : dffeas
 -- pragma translate_off
@@ -926,26 +561,25 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~input_o\,
-	d => \next_state.Char4~3_combout\,
+	d => \next_state.Char4~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \next_state.Char4~q\);
 
 \current_state.Char4~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \current_state.Char4~0_combout\ = (\current_state.Win~3_combout\ & ((\next_state.Char4~q\) # ((\current_state.Char4~q\ & !\current_state.Char1~0_combout\)))) # (!\current_state.Win~3_combout\ & (((\current_state.Char4~q\ & 
--- !\current_state.Char1~0_combout\))))
+-- \current_state.Char4~0_combout\ = (\next_state.Char4~q\ & (\change_state~11_combout\ & ((\change_state~8_combout\) # (!\next_state.Char1~1_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1000100011111000",
+	lut_mask => "1000101000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \current_state.Win~3_combout\,
-	datab => \next_state.Char4~q\,
-	datac => \current_state.Char4~q\,
-	datad => \current_state.Char1~0_combout\,
+	dataa => \next_state.Char4~q\,
+	datab => \change_state~8_combout\,
+	datac => \next_state.Char1~1_combout\,
+	datad => \change_state~11_combout\,
 	combout => \current_state.Char4~0_combout\);
 
 \current_state.Char4\ : dffeas
@@ -957,13 +591,14 @@ GENERIC MAP (
 PORT MAP (
 	clk => \CLK~input_o\,
 	d => \current_state.Char4~0_combout\,
+	ena => \current_state.Char0~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \current_state.Char4~q\);
 
-\change_state~10\ : cycloneive_lcell_comb
+\change_state~8\ : cycloneive_lcell_comb
 -- Equation(s):
--- \change_state~10_combout\ = (\current_state.Char4~q\ & (\letters~2_combout\ & (\letters~4_combout\ & !\letters~3_combout\)))
+-- \change_state~8_combout\ = (\current_state.Char4~q\ & (\letters~0_combout\ & (\letters~3_combout\ & !\letters~4_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -972,28 +607,27 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \current_state.Char4~q\,
-	datab => \letters~2_combout\,
-	datac => \letters~4_combout\,
-	datad => \letters~3_combout\,
-	combout => \change_state~10_combout\);
+	datab => \letters~0_combout\,
+	datac => \letters~3_combout\,
+	datad => \letters~4_combout\,
+	combout => \change_state~8_combout\);
 
-\current_state.Waiting~0\ : cycloneive_lcell_comb
+\next_state.Char1~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \current_state.Waiting~0_combout\ = (\change_state~8_combout\) # ((\change_state~9_combout\) # ((\change_state~10_combout\) # (!\next_state.Win~2_combout\)))
+-- \next_state.Char1~3_combout\ = (\change_state~11_combout\ & ((\next_state.Char1~q\) # (!\next_state.Char1~1_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111011111111",
+	lut_mask => "1010101000100010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \change_state~8_combout\,
-	datab => \change_state~9_combout\,
-	datac => \change_state~10_combout\,
-	datad => \next_state.Win~2_combout\,
-	combout => \current_state.Waiting~0_combout\);
+	dataa => \change_state~11_combout\,
+	datab => \next_state.Char1~1_combout\,
+	datad => \next_state.Char1~q\,
+	combout => \next_state.Char1~3_combout\);
 
-\next_state.Char0\ : dffeas
+\next_state.Char1\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1001,42 +635,233 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~input_o\,
-	d => \change_state~12_combout\,
-	ena => \next_state.Char4~1_combout\,
+	d => \next_state.Char1~3_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \next_state.Char0~q\);
+	q => \next_state.Char1~q\);
 
-\current_state.Char0~1\ : cycloneive_lcell_comb
+\current_state.Char1~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \current_state.Char0~1_combout\ = (!\change_state~11_combout\ & ((\current_state.Waiting~0_combout\ & ((!\next_state.Char0~q\))) # (!\current_state.Waiting~0_combout\ & (\current_state.Char0~0_combout\))))
+-- \current_state.Char1~0_combout\ = (\change_state~11_combout\ & (!\next_state.Char1~q\ & ((\change_state~8_combout\) # (!\next_state.Char1~1_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000101110",
+	lut_mask => "0000000010110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \current_state.Char0~0_combout\,
-	datab => \current_state.Waiting~0_combout\,
-	datac => \next_state.Char0~q\,
-	datad => \change_state~11_combout\,
-	combout => \current_state.Char0~1_combout\);
-
-\current_state.Char0~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \current_state.Char0~2_combout\ = (\current_state.Char0~1_combout\) # ((\START~input_o\ & \change_state~11_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110101011101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \current_state.Char0~1_combout\,
-	datab => \START~input_o\,
+	dataa => \change_state~8_combout\,
+	datab => \next_state.Char1~1_combout\,
 	datac => \change_state~11_combout\,
-	combout => \current_state.Char0~2_combout\);
+	datad => \next_state.Char1~q\,
+	combout => \current_state.Char1~0_combout\);
+
+\current_state.Char1\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~input_o\,
+	d => \current_state.Char1~0_combout\,
+	ena => \current_state.Char0~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \current_state.Char1~q\);
+
+\next_state.Char2~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \next_state.Char2~1_combout\ = (\MASK[5]~input_o\ & ((\Add1~0_combout\ & (\current_state.Char1~q\)) # (!\Add1~0_combout\ & ((\current_state.Char2~q\))))) # (!\MASK[5]~input_o\ & ((\Add1~0_combout\ & ((\current_state.Char2~q\))) # (!\Add1~0_combout\ & 
+-- (\current_state.Char1~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111011010010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \MASK[5]~input_o\,
+	datab => \Add1~0_combout\,
+	datac => \current_state.Char1~q\,
+	datad => \current_state.Char2~q\,
+	combout => \next_state.Char2~1_combout\);
+
+\next_state.Char2~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \next_state.Char2~2_combout\ = (\letters~3_combout\) # ((!\next_state.Char2~1_combout\) # (!\letters~4_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1011111110111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \letters~3_combout\,
+	datab => \letters~4_combout\,
+	datac => \next_state.Char2~1_combout\,
+	combout => \next_state.Char2~2_combout\);
+
+\next_state.Char1~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \next_state.Char1~1_combout\ = (\next_state.Char2~2_combout\ & (!\change_state~9_combout\ & !\change_state~10_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \next_state.Char2~2_combout\,
+	datac => \change_state~9_combout\,
+	datad => \change_state~10_combout\,
+	combout => \next_state.Char1~1_combout\);
+
+\current_state.Lose~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \current_state.Lose~0_combout\ = (\current_state.Lose~q\) # ((!\LIFE[0]~input_o\ & !\LIFE[1]~input_o\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010101010101111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \current_state.Lose~q\,
+	datac => \LIFE[0]~input_o\,
+	datad => \LIFE[1]~input_o\,
+	combout => \current_state.Lose~0_combout\);
+
+\current_state.Lose~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \current_state.Lose~1_combout\ = (\next_state.Char1~1_combout\ & (\current_state.Lose~0_combout\ & (\change_state~11_combout\ & !\change_state~8_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000010000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \next_state.Char1~1_combout\,
+	datab => \current_state.Lose~0_combout\,
+	datac => \change_state~11_combout\,
+	datad => \change_state~8_combout\,
+	combout => \current_state.Lose~1_combout\);
+
+\current_state.Lose\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~input_o\,
+	d => \current_state.Lose~1_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \current_state.Lose~q\);
+
+\current_state.Char3~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \current_state.Char3~0_combout\ = (\change_state~11_combout\ & ((\change_state~8_combout\) # (!\next_state.Char1~1_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \change_state~8_combout\,
+	datac => \next_state.Char1~1_combout\,
+	datad => \change_state~11_combout\,
+	combout => \current_state.Char3~0_combout\);
+
+\next_state.Char2~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \next_state.Char2~4_combout\ = (\next_state.Char2~2_combout\ & (\change_state~11_combout\ & !\change_state~10_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000010100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \next_state.Char2~2_combout\,
+	datac => \change_state~11_combout\,
+	datad => \change_state~10_combout\,
+	combout => \next_state.Char2~4_combout\);
+
+\next_state.Win~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \next_state.Win~1_combout\ = (\next_state.Char1~2_combout\ & (\next_state.Char2~4_combout\)) # (!\next_state.Char1~2_combout\ & ((\next_state.Win~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010101011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \next_state.Char2~4_combout\,
+	datab => \next_state.Win~q\,
+	datad => \next_state.Char1~2_combout\,
+	combout => \next_state.Win~1_combout\);
+
+\next_state.Win\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~input_o\,
+	d => \next_state.Win~1_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \next_state.Win~q\);
+
+\current_state.Win~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \current_state.Win~0_combout\ = (\current_state.Char3~0_combout\ & ((\next_state.Win~q\) # ((\current_state.Win~q\ & !\current_state.Char0~0_combout\)))) # (!\current_state.Char3~0_combout\ & (((\current_state.Win~q\ & !\current_state.Char0~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000100011111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \current_state.Char3~0_combout\,
+	datab => \next_state.Win~q\,
+	datac => \current_state.Win~q\,
+	datad => \current_state.Char0~0_combout\,
+	combout => \current_state.Win~0_combout\);
+
+\current_state.Win\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~input_o\,
+	d => \current_state.Win~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \current_state.Win~q\);
+
+\change_state~11\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \change_state~11_combout\ = ((!\current_state.Lose~q\ & !\current_state.Win~q\)) # (!\START~input_o\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101011101010111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \START~input_o\,
+	datab => \current_state.Lose~q\,
+	datac => \current_state.Win~q\,
+	combout => \change_state~11_combout\);
 
 \current_state.Char0\ : dffeas
 -- pragma translate_off
@@ -1046,57 +871,133 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~input_o\,
-	d => \current_state.Char0~2_combout\,
+	d => \change_state~11_combout\,
+	ena => \current_state.Char0~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \current_state.Char0~q\);
 
-\STATE_OUT[0]~0\ : cycloneive_lcell_comb
+\change_state~10\ : cycloneive_lcell_comb
 -- Equation(s):
--- \STATE_OUT[0]~0_combout\ = (\current_state.Char0~q\) # ((\current_state.Char2~q\) # ((\current_state.Char4~q\) # (\current_state.Lose~q\)))
+-- \change_state~10_combout\ = (\letters~0_combout\ & (!\current_state.Char0~q\ & (!\letters~3_combout\ & !\letters~4_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111111111110",
+	lut_mask => "0000000000000010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \current_state.Char0~q\,
-	datab => \current_state.Char2~q\,
-	datac => \current_state.Char4~q\,
-	datad => \current_state.Lose~q\,
+	dataa => \letters~0_combout\,
+	datab => \current_state.Char0~q\,
+	datac => \letters~3_combout\,
+	datad => \letters~4_combout\,
+	combout => \change_state~10_combout\);
+
+\next_state.Char2~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \next_state.Char2~3_combout\ = (\change_state~10_combout\ & ((\change_state~11_combout\) # ((\next_state.Char2~q\ & !\next_state.Char1~2_combout\)))) # (!\change_state~10_combout\ & (\next_state.Char2~q\ & ((!\next_state.Char1~2_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010000011101100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \change_state~10_combout\,
+	datab => \next_state.Char2~q\,
+	datac => \change_state~11_combout\,
+	datad => \next_state.Char1~2_combout\,
+	combout => \next_state.Char2~3_combout\);
+
+\next_state.Char2\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~input_o\,
+	d => \next_state.Char2~3_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \next_state.Char2~q\);
+
+\current_state.Char2~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \current_state.Char2~0_combout\ = (\next_state.Char2~q\ & (\change_state~11_combout\ & ((\change_state~8_combout\) # (!\next_state.Char1~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000101000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \next_state.Char2~q\,
+	datab => \change_state~8_combout\,
+	datac => \next_state.Char1~1_combout\,
+	datad => \change_state~11_combout\,
+	combout => \current_state.Char2~0_combout\);
+
+\current_state.Char2\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~input_o\,
+	d => \current_state.Char2~0_combout\,
+	ena => \current_state.Char0~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \current_state.Char2~q\);
+
+\STATE_OUT[0]~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \STATE_OUT[0]~0_combout\ = (\current_state.Char2~q\) # ((\current_state.Char4~q\) # ((\current_state.Lose~q\) # (!\current_state.Char0~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111011111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \current_state.Char2~q\,
+	datab => \current_state.Char4~q\,
+	datac => \current_state.Lose~q\,
+	datad => \current_state.Char0~q\,
 	combout => \STATE_OUT[0]~0_combout\);
 
 \STATE_OUT[1]~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \STATE_OUT[1]~1_combout\ = (\current_state.Char0~q\) # ((\current_state.Char4~q\) # ((\current_state.Char1~q\) # (\current_state.Win~q\)))
+-- \STATE_OUT[1]~1_combout\ = (\current_state.Char4~q\) # ((\current_state.Char1~q\) # ((\current_state.Win~q\) # (!\current_state.Char0~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111111111110",
+	lut_mask => "1111111011111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \current_state.Char0~q\,
-	datab => \current_state.Char4~q\,
-	datac => \current_state.Char1~q\,
-	datad => \current_state.Win~q\,
+	dataa => \current_state.Char4~q\,
+	datab => \current_state.Char1~q\,
+	datac => \current_state.Win~q\,
+	datad => \current_state.Char0~q\,
 	combout => \STATE_OUT[1]~1_combout\);
 
 \STATE_OUT[2]~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \STATE_OUT[2]~2_combout\ = (\current_state.Char0~q\) # ((\current_state.Char2~q\) # ((\current_state.Char1~q\) # (\current_state.Char3~q\)))
+-- \STATE_OUT[2]~2_combout\ = (\current_state.Char2~q\) # ((\current_state.Char1~q\) # ((\current_state.Char3~q\) # (!\current_state.Char0~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111111111110",
+	lut_mask => "1111111011111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \current_state.Char0~q\,
-	datab => \current_state.Char2~q\,
-	datac => \current_state.Char1~q\,
-	datad => \current_state.Char3~q\,
+	dataa => \current_state.Char2~q\,
+	datab => \current_state.Char1~q\,
+	datac => \current_state.Char3~q\,
+	datad => \current_state.Char0~q\,
 	combout => \STATE_OUT[2]~2_combout\);
 
 \MASK[0]~input\ : cycloneive_io_ibuf

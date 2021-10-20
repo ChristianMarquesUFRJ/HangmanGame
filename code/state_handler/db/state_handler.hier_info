@@ -16,7 +16,6 @@ MASK[5] => letters.OUTPUTSELECT
 LIFE[0] => Equal5.IN5
 LIFE[1] => Equal5.IN4
 START => change_state.IN1
-START => change_state.IN1
 CLK => next_state~1.DATAIN
 CLK => current_state~1.DATAIN
 STATE_OUT[0] <= STATE_OUT[0]$latch.DB_MAX_OUTPUT_PORT_TYPE

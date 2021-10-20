@@ -26,7 +26,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 05 10:57:09 2021
+    Info: Processing started: Tue Oct 19 22:20:15 2021
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off state_handler -c state_handler --vector_source=C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/Waveform.vwf --testbench_file=C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/simulation/qsim/Waveform.vwf.vht
 Info (119004): Automatically selected device EP4CE6E22C6 for design state_handler
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -54,15 +54,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 05 10:57:11 2021
+    Info: Processing started: Tue Oct 19 22:20:16 2021
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/simulation/qsim/ state_handler -c state_handler
 Info (119004): Automatically selected device EP4CE6E22C6 for design state_handler
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file state_handler.vho in folder "C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4641 megabytes
-    Info: Processing ended: Tue Oct 05 10:57:12 2021
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4639 megabytes
+    Info: Processing ended: Tue Oct 19 22:20:18 2021
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -87,26 +87,29 @@ Reading pref.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:57:14 on Oct 05,2021
+# Start time: 22:20:20 on Oct 19,2021
 # vcom -work work state_handler.vho 
 
 # -- Loading package STANDARD
+
 # -- Loading package TEXTIO
+
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
 # -- Loading package VITAL_Primitives
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
+
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
 # -- Compiling entity state_handler
 # -- Compiling architecture structure of state_handler
 
-# End time: 10:57:15 on Oct 05,2021, Elapsed time: 0:00:01
+# End time: 22:20:22 on Oct 19,2021, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:57:15 on Oct 05,2021
+# Start time: 22:20:22 on Oct 19,2021
 # vcom -work work Waveform.vwf.vht 
 
 # -- Loading package STANDARD
@@ -114,11 +117,12 @@ Reading pref.tcl
 # -- Loading package std_logic_1164
 # -- Compiling entity state_handler_vhd_vec_tst
 # -- Compiling architecture state_handler_arch of state_handler_vhd_vec_tst
-# End time: 10:57:15 on Oct 05,2021, Elapsed time: 0:00:00
+
+# End time: 22:20:22 on Oct 19,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.state_handler_vhd_vec_tst 
-# Start time: 10:57:15 on Oct 05,2021
+# Start time: 22:20:22 on Oct 19,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -135,9 +139,10 @@ Reading pref.tcl
 # Loading cycloneive.cycloneive_io_ibuf(arch)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
+
 # after#33
 
-# End time: 10:57:16 on Oct 05,2021, Elapsed time: 0:00:01
+# End time: 22:20:24 on Oct 19,2021, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -150,7 +155,7 @@ Reading C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/simulation/qsim/state_handler_20211005105717.sim.vwf
+Writing the resulting VWF to C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/simulation/qsim/state_handler_20211019222024.sim.vwf
 
 Finished VCD to VWF conversion.
 

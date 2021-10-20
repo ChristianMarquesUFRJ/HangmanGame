@@ -1,25 +1,25 @@
 # do letter_verification.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:04:48 on Oct 05,2021
+# Start time: 22:16:27 on Oct 19,2021
 # vlog -work work letter_verification.vo 
 # -- Compiling module letter_verification
 # 
 # Top level modules:
 # 	letter_verification
-# End time: 10:04:48 on Oct 05,2021, Elapsed time: 0:00:00
+# End time: 22:16:27 on Oct 19,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:04:48 on Oct 05,2021
+# Start time: 22:16:27 on Oct 19,2021
 # vlog -work work Waveform.vwf.vt 
 # -- Compiling module letter_verification_vlg_vec_tst
 # 
 # Top level modules:
 # 	letter_verification_vlg_vec_tst
-# End time: 10:04:48 on Oct 05,2021, Elapsed time: 0:00:00
+# End time: 22:16:27 on Oct 19,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.letter_verification_vlg_vec_tst 
-# Start time: 10:04:48 on Oct 05,2021
+# Start time: 22:16:27 on Oct 19,2021
 # Loading work.letter_verification_vlg_vec_tst
 # Loading work.letter_verification
 # Loading cycloneive_ver.cycloneive_io_obuf
@@ -30,5 +30,5 @@
 # after#25
 # ** Note: $finish    : Waveform.vwf.vt(51)
 #    Time: 1 us  Iteration: 0  Instance: /letter_verification_vlg_vec_tst
-# End time: 10:04:49 on Oct 05,2021, Elapsed time: 0:00:01
+# End time: 22:16:28 on Oct 19,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

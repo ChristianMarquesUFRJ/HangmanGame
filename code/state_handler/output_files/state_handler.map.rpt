@@ -1,5 +1,5 @@
 Analysis & Synthesis report for state_handler
-Tue Oct 05 10:57:03 2021
+Tue Oct 19 22:19:59 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -47,15 +47,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 05 10:57:03 2021       ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 19 22:19:59 2021       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; state_handler                               ;
 ; Top-level Entity Name              ; state_handler                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 42                                          ;
-;     Total combinational functions  ; 41                                          ;
-;     Dedicated logic registers      ; 14                                          ;
-; Total registers                    ; 14                                          ;
+; Total logic elements               ; 37                                          ;
+;     Total combinational functions  ; 37                                          ;
+;     Dedicated logic registers      ; 12                                          ;
+; Total registers                    ; 12                                          ;
 ; Total pins                         ; 13                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -175,36 +175,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 42        ;
-;                                             ;           ;
-; Total combinational functions               ; 41        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 27        ;
-;     -- 3 input functions                    ; 13        ;
-;     -- <=2 input functions                  ; 1         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 41        ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 14        ;
-;     -- Dedicated logic registers            ; 14        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 13        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 14        ;
-; Total fan-out                               ; 195       ;
-; Average fan-out                             ; 2.41      ;
-+---------------------------------------------+-----------+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 37              ;
+;                                             ;                 ;
+; Total combinational functions               ; 37              ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 22              ;
+;     -- 3 input functions                    ; 13              ;
+;     -- <=2 input functions                  ; 2               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 37              ;
+;     -- arithmetic mode                      ; 0               ;
+;                                             ;                 ;
+; Total registers                             ; 12              ;
+;     -- Dedicated logic registers            ; 12              ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 13              ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; change_state~11 ;
+; Maximum fan-out                             ; 14              ;
+; Total fan-out                               ; 176             ;
+; Average fan-out                             ; 2.35            ;
++---------------------------------------------+-----------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -212,7 +212,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
-; |state_handler             ; 41 (41)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |state_handler      ; state_handler ; work         ;
+; |state_handler             ; 37 (37)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |state_handler      ; state_handler ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -220,35 +220,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |state_handler|next_state                                                                                                                                 ;
-+--------------------+-----------------+----------------+------------------+------------------+------------------+------------------+--------------------+------------------+
-; Name               ; next_state.Lose ; next_state.Win ; next_state.Char4 ; next_state.Char3 ; next_state.Char2 ; next_state.Char1 ; next_state.Waiting ; next_state.Char0 ;
-+--------------------+-----------------+----------------+------------------+------------------+------------------+------------------+--------------------+------------------+
-; next_state.Char0   ; 0               ; 0              ; 0                ; 0                ; 0                ; 0                ; 0                  ; 0                ;
-; next_state.Waiting ; 0               ; 0              ; 0                ; 0                ; 0                ; 0                ; 1                  ; 1                ;
-; next_state.Char1   ; 0               ; 0              ; 0                ; 0                ; 0                ; 1                ; 0                  ; 1                ;
-; next_state.Char2   ; 0               ; 0              ; 0                ; 0                ; 1                ; 0                ; 0                  ; 1                ;
-; next_state.Char3   ; 0               ; 0              ; 0                ; 1                ; 0                ; 0                ; 0                  ; 1                ;
-; next_state.Char4   ; 0               ; 0              ; 1                ; 0                ; 0                ; 0                ; 0                  ; 1                ;
-; next_state.Win     ; 0               ; 1              ; 0                ; 0                ; 0                ; 0                ; 0                  ; 1                ;
-; next_state.Lose    ; 1               ; 0              ; 0                ; 0                ; 0                ; 0                ; 0                  ; 1                ;
-+--------------------+-----------------+----------------+------------------+------------------+------------------+------------------+--------------------+------------------+
++--------------------+-----------------+----------------+------------------+------------------+------------------+--------------------+------------------+------------------+
+; Name               ; next_state.Lose ; next_state.Win ; next_state.Char4 ; next_state.Char3 ; next_state.Char2 ; next_state.Waiting ; next_state.Char0 ; next_state.Char1 ;
++--------------------+-----------------+----------------+------------------+------------------+------------------+--------------------+------------------+------------------+
+; next_state.Char1   ; 0               ; 0              ; 0                ; 0                ; 0                ; 0                  ; 0                ; 0                ;
+; next_state.Char0   ; 0               ; 0              ; 0                ; 0                ; 0                ; 0                  ; 1                ; 1                ;
+; next_state.Waiting ; 0               ; 0              ; 0                ; 0                ; 0                ; 1                  ; 0                ; 1                ;
+; next_state.Char2   ; 0               ; 0              ; 0                ; 0                ; 1                ; 0                  ; 0                ; 1                ;
+; next_state.Char3   ; 0               ; 0              ; 0                ; 1                ; 0                ; 0                  ; 0                ; 1                ;
+; next_state.Char4   ; 0               ; 0              ; 1                ; 0                ; 0                ; 0                  ; 0                ; 1                ;
+; next_state.Win     ; 0               ; 1              ; 0                ; 0                ; 0                ; 0                  ; 0                ; 1                ;
+; next_state.Lose    ; 1               ; 0              ; 0                ; 0                ; 0                ; 0                  ; 0                ; 1                ;
++--------------------+-----------------+----------------+------------------+------------------+------------------+--------------------+------------------+------------------+
 
 
 Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |state_handler|current_state                                                                                                                                                         ;
-+-----------------------+--------------------+-------------------+---------------------+---------------------+---------------------+---------------------+---------------------+-----------------------+
-; Name                  ; current_state.Lose ; current_state.Win ; current_state.Char4 ; current_state.Char3 ; current_state.Char2 ; current_state.Char1 ; current_state.Char0 ; current_state.Waiting ;
-+-----------------------+--------------------+-------------------+---------------------+---------------------+---------------------+---------------------+---------------------+-----------------------+
-; current_state.Waiting ; 0                  ; 0                 ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 0                     ;
-; current_state.Char0   ; 0                  ; 0                 ; 0                   ; 0                   ; 0                   ; 0                   ; 1                   ; 1                     ;
-; current_state.Char1   ; 0                  ; 0                 ; 0                   ; 0                   ; 0                   ; 1                   ; 0                   ; 1                     ;
-; current_state.Char2   ; 0                  ; 0                 ; 0                   ; 0                   ; 1                   ; 0                   ; 0                   ; 1                     ;
-; current_state.Char3   ; 0                  ; 0                 ; 0                   ; 1                   ; 0                   ; 0                   ; 0                   ; 1                     ;
-; current_state.Char4   ; 0                  ; 0                 ; 1                   ; 0                   ; 0                   ; 0                   ; 0                   ; 1                     ;
-; current_state.Win     ; 0                  ; 1                 ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 1                     ;
-; current_state.Lose    ; 1                  ; 0                 ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ; 1                     ;
-+-----------------------+--------------------+-------------------+---------------------+---------------------+---------------------+---------------------+---------------------+-----------------------+
++-----------------------+--------------------+-------------------+---------------------+---------------------+---------------------+---------------------+-----------------------+---------------------+
+; Name                  ; current_state.Lose ; current_state.Win ; current_state.Char4 ; current_state.Char3 ; current_state.Char2 ; current_state.Char1 ; current_state.Waiting ; current_state.Char0 ;
++-----------------------+--------------------+-------------------+---------------------+---------------------+---------------------+---------------------+-----------------------+---------------------+
+; current_state.Char0   ; 0                  ; 0                 ; 0                   ; 0                   ; 0                   ; 0                   ; 0                     ; 0                   ;
+; current_state.Waiting ; 0                  ; 0                 ; 0                   ; 0                   ; 0                   ; 0                   ; 1                     ; 1                   ;
+; current_state.Char1   ; 0                  ; 0                 ; 0                   ; 0                   ; 0                   ; 1                   ; 0                     ; 1                   ;
+; current_state.Char2   ; 0                  ; 0                 ; 0                   ; 0                   ; 1                   ; 0                   ; 0                     ; 1                   ;
+; current_state.Char3   ; 0                  ; 0                 ; 0                   ; 1                   ; 0                   ; 0                   ; 0                     ; 1                   ;
+; current_state.Char4   ; 0                  ; 0                 ; 1                   ; 0                   ; 0                   ; 0                   ; 0                     ; 1                   ;
+; current_state.Win     ; 0                  ; 1                 ; 0                   ; 0                   ; 0                   ; 0                   ; 0                     ; 1                   ;
+; current_state.Lose    ; 1                  ; 0                 ; 0                   ; 0                   ; 0                   ; 0                   ; 0                     ; 1                   ;
++-----------------------+--------------------+-------------------+---------------------+---------------------+---------------------+---------------------+-----------------------+---------------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -256,9 +256,11 @@ Encoding Type:  One-Hot
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; next_state.Waiting                    ; Merged with next_state.Lose            ;
-; next_state.Lose                       ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
+; next_state.Lose                       ; Merged with next_state.Char0           ;
+; next_state.Waiting                    ; Merged with next_state.Char0           ;
+; next_state.Char0                      ; Stuck at GND due to stuck port data_in ;
+; current_state.Waiting                 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 4 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -267,26 +269,24 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 14    ;
+; Total registers                              ; 12    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 2     ;
+; Number of registers using Clock Enable       ; 5     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |state_handler|current_state.Char1   ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |state_handler|next_state.Waiting    ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |state_handler|current_state.Waiting ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |state_handler|next_state.Char0      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |state_handler|current_state.Char0 ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |state_handler|next_state.Char1    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -295,18 +295,18 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 13                          ;
-; cycloneiii_ff         ; 14                          ;
-;     ENA               ; 2                           ;
-;     plain             ; 12                          ;
-; cycloneiii_lcell_comb ; 44                          ;
-;     normal            ; 44                          ;
+; cycloneiii_ff         ; 12                          ;
+;     ENA               ; 5                           ;
+;     plain             ; 7                           ;
+; cycloneiii_lcell_comb ; 40                          ;
+;     normal            ; 40                          ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
 ;         3 data inputs ; 13                          ;
-;         4 data inputs ; 27                          ;
+;         4 data inputs ; 22                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 4.15                        ;
+; Average LUT depth     ; 4.18                        ;
 +-----------------------+-----------------------------+
 
 
@@ -315,7 +315,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -325,7 +325,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 05 10:56:45 2021
+    Info: Processing started: Tue Oct 19 22:19:44 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off state_handler -c state_handler
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -333,34 +333,33 @@ Info (12021): Found 2 design units, including 1 entities, in source file state_h
     Info (12022): Found design unit 1: state_handler-hardware File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 37
     Info (12023): Found entity 1: state_handler File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 23
 Info (12127): Elaborating entity "state_handler" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at state_handler.vhd(63): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 63
-Warning (10492): VHDL Process Statement warning at state_handler.vhd(68): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 68
-Warning (10492): VHDL Process Statement warning at state_handler.vhd(73): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 73
-Warning (10492): VHDL Process Statement warning at state_handler.vhd(78): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 78
-Warning (10492): VHDL Process Statement warning at state_handler.vhd(83): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 83
-Warning (10492): VHDL Process Statement warning at state_handler.vhd(88): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at state_handler.vhd(64): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 64
+Warning (10492): VHDL Process Statement warning at state_handler.vhd(69): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at state_handler.vhd(74): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 74
+Warning (10492): VHDL Process Statement warning at state_handler.vhd(79): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at state_handler.vhd(84): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at state_handler.vhd(89): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 89
 Warning (10492): VHDL Process Statement warning at state_handler.vhd(93): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 93
-Warning (10492): VHDL Process Statement warning at state_handler.vhd(97): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 97
-Warning (10492): VHDL Process Statement warning at state_handler.vhd(97): signal "LIFE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 97
-Warning (10492): VHDL Process Statement warning at state_handler.vhd(102): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 102
-Warning (10492): VHDL Process Statement warning at state_handler.vhd(103): signal "next_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 103
-Warning (10631): VHDL Process Statement warning at state_handler.vhd(110): inferring latch(es) for signal or variable "STATE_OUT", which holds its previous value in one or more paths through the process File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 110
-Info (10041): Inferred latch for "STATE_OUT[0]" at state_handler.vhd(110) File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 110
-Info (10041): Inferred latch for "STATE_OUT[1]" at state_handler.vhd(110) File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 110
-Info (10041): Inferred latch for "STATE_OUT[2]" at state_handler.vhd(110) File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 110
+Warning (10492): VHDL Process Statement warning at state_handler.vhd(93): signal "LIFE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at state_handler.vhd(98): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at state_handler.vhd(99): signal "next_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 99
+Warning (10631): VHDL Process Statement warning at state_handler.vhd(106): inferring latch(es) for signal or variable "STATE_OUT", which holds its previous value in one or more paths through the process File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 106
+Info (10041): Inferred latch for "STATE_OUT[0]" at state_handler.vhd(106) File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 106
+Info (10041): Inferred latch for "STATE_OUT[1]" at state_handler.vhd(106) File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 106
+Info (10041): Inferred latch for "STATE_OUT[2]" at state_handler.vhd(106) File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 106
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "MASK[0]" File: C:/Users/chris/Desktop/quartus/Trabalhos/HangmanGame/code/state_handler/state_handler.vhd Line: 25
-Info (21057): Implemented 56 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 43 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4782 megabytes
-    Info: Processing ended: Tue Oct 05 10:57:03 2021
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:33
+    Info (21061): Implemented 38 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 4781 megabytes
+    Info: Processing ended: Tue Oct 19 22:19:59 2021
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:28
 
 

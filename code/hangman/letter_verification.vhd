@@ -61,7 +61,6 @@ begin
         LIFE <= LIFE_CTRL;
     END PROCESS life_process;
 
-
     ------------------------------------
     -- Letras corretas
     ------------------------------------
@@ -127,7 +126,6 @@ begin
 
     END PROCESS button13_process;
     ------------------------------------
-
 
     ------------------------------------
     -- Letras invalidas

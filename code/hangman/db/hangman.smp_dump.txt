@@ -1,9 +1,9 @@
 
 State Machine - |hangman|state_handler:state_handler_comp|next_state
-Name next_state.Lose next_state.Win next_state.Char4 next_state.Char3 next_state.Char2 next_state.Char1 next_state.Waiting next_state.Char0 
-next_state.Char0 0 0 0 0 0 0 0 0 
-next_state.Waiting 0 0 0 0 0 0 1 1 
-next_state.Char1 0 0 0 0 0 1 0 1 
+Name next_state.Lose next_state.Win next_state.Char4 next_state.Char3 next_state.Char2 next_state.Waiting next_state.Char0 next_state.Char1 
+next_state.Char1 0 0 0 0 0 0 0 0 
+next_state.Char0 0 0 0 0 0 0 1 1 
+next_state.Waiting 0 0 0 0 0 1 0 1 
 next_state.Char2 0 0 0 0 1 0 0 1 
 next_state.Char3 0 0 0 1 0 0 0 1 
 next_state.Char4 0 0 1 0 0 0 0 1 
@@ -11,9 +11,9 @@ next_state.Win 0 1 0 0 0 0 0 1
 next_state.Lose 1 0 0 0 0 0 0 1 
 
 State Machine - |hangman|state_handler:state_handler_comp|current_state
-Name current_state.Lose current_state.Win current_state.Char4 current_state.Char3 current_state.Char2 current_state.Char1 current_state.Char0 current_state.Waiting 
-current_state.Waiting 0 0 0 0 0 0 0 0 
-current_state.Char0 0 0 0 0 0 0 1 1 
+Name current_state.Lose current_state.Win current_state.Char4 current_state.Char3 current_state.Char2 current_state.Char1 current_state.Waiting current_state.Char0 
+current_state.Char0 0 0 0 0 0 0 0 0 
+current_state.Waiting 0 0 0 0 0 0 1 1 
 current_state.Char1 0 0 0 0 0 1 0 1 
 current_state.Char2 0 0 0 0 1 0 0 1 
 current_state.Char3 0 0 0 1 0 0 0 1 

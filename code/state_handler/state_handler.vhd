@@ -59,13 +59,9 @@ begin
     -- Transicao de estados
     change_state: PROCESS (START, MASK, CLK)
     BEGIN
-        -- Se finalizou o jogo ou esta aguardando o start, o estado atual deve ser o de espera 
-        IF (((current_state = Waiting) or (current_state = Win) or (current_state = Lose)) and (START = '0') and rising_edge(CLK)) THEN
-            current_state   <= Waiting;
-            next_state      <= Char0;
 
         -- Caso esteja em espera e receba o comando de start, o estado atual passa a ser o de CHAR_0 e o proximo CHAR_1
-        ELSIF (((current_state = Waiting) or (current_state = Win) or (current_state = Lose)) and (START = '1') and rising_edge(CLK)) THEN
+        IF (((current_state = Waiting) or (current_state = Win) or (current_state = Lose)) and (START = '1') and rising_edge(CLK)) THEN
             current_state   <= Char0;
             next_state      <= Char1;
 
